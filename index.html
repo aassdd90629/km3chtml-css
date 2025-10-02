@@ -4,143 +4,69 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-
-	<style type="text/css">
-		
-		*{
-			margin: 0;
-			padding: 0;
-      list-style-type: none;
-		}
-
-		body{
-			background-color: #f6f6f6;
-			font-family: Arial, '微軟正黑體';
-			padding-top: 50px;
-		}
-
-		.wrapper{
-			width: 1200px;
-			padding: 10px;
-			margin: 0 auto;
-			background-color: #fff;
-		}
-		
-		/*---- 頁首 header ----*/
-    header{
-      background-color: #ccc;
-      height: 150px;
-      text-align: center;
-    }
-
-    header h1{
-      line-height: 150px;
-    }
-	
-		/*---- 主區塊 main ----*/
-		main{
-      overflow: hidden;
-      padding: 10px 0;
-    }
-		
-		/*---- 選單(導航列) nav ----*/
-		nav{
-      width: 200px;
-      background-color: lightblue;
-      padding: 20px;
-      float: left;
-    }
-
-    nav ul{}
-
-    nav li{
-      margin-bottom: 1px;
-    }
-
-    nav li a{
-      display: block;
-      background-color: rgb(24, 76, 173);
-      text-decoration: none;
-      text-align: center;
-      line-height: 40px;
-      color: #fff;
-    }
-
-		/*---- 內容區塊 article & section ----*/
-		article{
-      width: 640px;
-      float: left;
-      padding: 30px;
-      background-color: lightpink;
-      margin: 0 10px;
-    }
-
-    article section{}
-
-    article section h2{}
-
-    article section p{}
-
-		/* ---- 側邊欄 aside ---- */
-    aside{
-      width: 200px;
-      padding: 20px;
-      float: left;
-      background-color: rgb(108, 195, 120);
-    }
-
-    aside p{}
-
-		/*---- 頁尾 footer ----*/
-		footer{
-      clear: both;
-      text-align: center;
-      line-height: 50px;
-      background-color: #e5e5e5;
-    }
-
-    footer h3{
-      font-size: 13px;
-    }
-		
-
-	</style>
-
+  <title>KM3CHome</title>
+  <!-- css list -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <div class="nav-logo">
+          <a href="index.html"><img alt="logo" width="100" height="60" src="img/logo_1.png"></a>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="nav-btn">
+          <ul>
+            <li class="nav-link">
+              <a href="promo.html">優惠活動</a>
+          </li>
+            <li class="nav-link">
+              <a href="search.html">尋找商品</a>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown.link">
+                    <a href="product-list.html">電競鍵盤</a>
+                  </li>
+                  <li class="dropdown.link">
+                    <a href="product-list.html">電競滑鼠</a>
+                  </li>
+                  <li class="dropdown.link">
+                    <a href="product-list.html">無線耳機</a>
+                  </li>
+                  <li class="dropdown.link">
+                    <a href="product-list.html">其他周邊</a>
+                  </li>
+                </ul>
+              </div>              
+            </li>
+            <li class="nav-link">
+              <a href="about.html">關於我們</a>
+            </li>
+            <li class="nav-link">
+              <a href="member.html">會員專區</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="swiper-baneer">
+
+  </div>
+
+  
 	
-	<div class="wrapper"><!-- 最外層包裝 開始 -->
-    <header>
-      <h1>header 代表網頁的首頁</h1>
-    </header>
+  
 
-    <main>
-      <!-- 選單(導航列) -->
-      <nav>
-        <ul>
-          <!-- 都同樣的話是用alt+shift+下箭頭 -->
-          <li><a href="#">導航列</a></li>
-          <li><a href="#">導航列</a></li>
-          <li><a href="#">導航列</a></li>
-        </ul>
-      </nav>
 
-    <!-- 內容區塊 -->
-      <article>
-        <section>
-          <h2>主內容標題</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et labore architecto repellendus a dolorum error, autem nesciunt at commodi dolore? Magni maiores dolores, aliquam exercitationem quaerat ipsa animi sed!</p>
-        </section>
-      </article>
-    <!-- 側邊欄 -->
-      <aside>
-        <p>側邊欄內容</p>
-        <p>側邊欄內容</p>
-        <p>側邊欄內容</p>
-      </aside>
-
-    </main>
 
     <footer>
       <h3>footer代表網頁的頁尾</h3>
@@ -148,7 +74,7 @@
 		
 		
 
-	</div><!-- 最外層包裝 結束 -->
+
 
 </body>
 </html>
