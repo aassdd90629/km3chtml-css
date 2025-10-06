@@ -1,1 +1,177 @@
 @import url('reset.css');
+
+/* footer */
+/* footer{ */
+    /* 固定 */
+    /* display: flex;
+    background-color: #60C7FA;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 300px;
+    z-index: 1000;
+    margin-top: 8px; */
+    /* box-shadow: 0px 5px 5px 0px #77adff40; */
+    /* align-items: center;
+    justify-content: center;
+    display: block;
+    unicode-bidi: isolate;
+} */
+
+/* .containerfooter{
+    display: flex;
+    width: 1200px;
+    height: 300px;
+} */
+
+/* ========== 基本設定 ========== */
+footer{
+  background: #60C7FA;              /* 淺藍底 */
+  font-family: "Noto Sans TC", system-ui, "Segoe UI", "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
+               "微軟正黑體", sans-serif;
+  color: #111;
+}
+
+.containerfooter{
+  width: 1200px;                 
+  height: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 116px;            
+}
+
+/* 5 欄寬度配置：左 1 欄較寬、中間 3 欄固定寬、右側 QR 固定寬 */
+.footer-container{
+    width: 288px;
+    height: 185px;
+    /* flex: 0 0 520px;  */
+}
+.info-text{
+    padding-top: 48px;
+}
+
+/* ========== 左側資訊區（logo + 文案 + 聯絡資訊） ========== */
+.info-logo{ 
+    padding-top: 48px;
+    display: flex; 
+    row-gap: 12px; 
+}
+
+.info-logo img{
+  display: block;
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.info-logo ul{ 
+
+    align-items: center;
+
+}
+.info-logo ul li{
+    width: 188px;
+    height: 48px;
+  line-height: 1.6;
+  font-weight: 700;                 /* 粗體對應截圖標語 */
+}
+
+/* 地址/電話/信箱/網站：icon 與文字橫向排列 */
+.info{
+    width: 285px;
+    height: 165px;
+    padding-top: 26px;
+}
+.address, .tel, .email, .web{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.tel i, .email i, .web i{
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+.address i{
+    width: 20px;
+    height: 20px;
+    margin-top: 24px;
+}
+
+.address span{ 
+    font-weight: 800; 
+}  /* 截圖中的粗黑字 */
+.tel span, .email span, .web span{ 
+    font-weight: 700; 
+    font-size: 16px;
+}
+
+/* ========== 中間 3 欄連結 ========== */
+.info-about .p-title{
+  font-size: 20px;
+  font-weight: 800;
+  margin: 2px 0 12px;
+}
+
+.info-about ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 12px;
+}
+
+.info-about a{
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.info-about a:hover{
+  text-decoration: underline;
+}
+
+/* ========== 右側 LINE QR ========== */
+.line{
+    padding-top: 48px;
+    width: 184px;                    
+    height: 206px;
+    margin-left: 12px; 
+}
+.line img{
+    width: 184px;                    
+    height: 206px;        
+}
+
+/* ========== 版權列（細黑線 + 置中小字） ========== */
+.copyright{
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+    
+}
+
+.copyright::before{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  background: #0c0c0c;
+}
+
+.copyright .text{
+  width: 250px;
+  height: 20px;
+  color: #0c0c0c;
+  font-weight: 700;
+  padding-top: 4px;
+}
+
+.copyright .text p{
+  margin: 0;
+  font-size: 16px;
+}
