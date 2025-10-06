@@ -31,6 +31,9 @@ footer{
   color: #111;
 }
 
+@media (min-width: 1400px){
+  .container{ max-width: 1200px; }   /* 覆蓋成 1200 */
+}
 .containerfooter{
   width: 1200px;                 
   height: 300px;
@@ -147,7 +150,7 @@ footer{
 }
 
 /* ========== 版權列（細黑線 + 置中小字） ========== */
-.copyright{
+.container-copyright{
   width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -155,7 +158,8 @@ footer{
     
 }
 
-.copyright::before{
+.container-copyright::before{
+  width: 1200px;
   content: "";
   position: absolute;
   left: 0; right: 0; top: 0;
@@ -163,15 +167,15 @@ footer{
   background: #0c0c0c;
 }
 
-.copyright .text{
+.container-copyright .text{
   width: 250px;
-  height: 20px;
+  height: 32px;
   color: #0c0c0c;
   font-weight: 700;
   padding-top: 4px;
 }
 
-.copyright .text p{
+.container-copyright .text p{
   margin: 0;
   font-size: 16px;
 }
