@@ -29,10 +29,8 @@ footer{
   font-family: "Noto Sans TC", system-ui, "Segoe UI", "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
                "微軟正黑體", sans-serif;
   color: #111;
-}
-
-@media (min-width: 1400px){
-  .container{ max-width: 1200px; }   /* 覆蓋成 1200 */
+  margin-top: 16px;
+  
 }
 .containerfooter{
   width: 1200px;                 
@@ -41,7 +39,7 @@ footer{
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
-  gap: 116px;            
+  gap: 116px;        
 }
 
 /* 5 欄寬度配置：左 1 欄較寬、中間 3 欄固定寬、右側 QR 固定寬 */
@@ -58,7 +56,6 @@ footer{
 .info-logo{ 
     padding-top: 48px;
     display: flex; 
-    row-gap: 12px; 
 }
 
 .info-logo img{
@@ -69,7 +66,7 @@ footer{
 }
 
 .info-logo ul{ 
-
+    padding-left: 0px;
     align-items: center;
 
 }
