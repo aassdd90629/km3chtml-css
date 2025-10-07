@@ -1,0 +1,187 @@
+/* 麵包屑 */
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+  font-size: 15px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #007bff;
+}
+
+.breadcrumb i {
+  font-size: 16px;
+  color: #999;
+}
+
+/* 整體 */
+.contain-product{
+  display: flex;
+  gap: 16px;
+  /* align-items: flex-start;
+  flex-direction: column; */
+  
+  color: #111;
+}
+
+/* 左側選單 */
+.filterin{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #111; 
+}
+
+.filter-in-left{
+  width: 200px;             
+  background: #fff;
+  border-radius: 30px;
+  padding: 18px 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+/* 分類清單  */
+.drown-list{
+  position: relative;
+  display: block;
+  padding: 10px 8px;
+  line-height: 1.35;
+  font-size: 20px;              
+  font-weight: 500;             
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.drown-list i{
+  margin-left: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+  opacity: .9;
+}
+
+.drown-list:hover{
+  background: rgba(0,0,0,.05);
+}
+
+/*  下面篩選 */
+.select-wrap{ 
+    position: relative; 
+}
+
+.select-text{
+  font-size: 18px;
+  font-weight: 600;            
+  margin-bottom: 10px;
+}
+
+/* select */
+.select{
+  display: block;
+  width: 168px;
+  height: 44px;
+  padding: 0 40px 0 14px;       
+  border: 0;
+  border-radius: 10px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  appearance: none;     /* 移除原生箭頭 */
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+}
+
+
+.select-caret{
+  position: absolute;
+  right: 16px;
+  top: calc(10px + 22px);       
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;         
+  opacity: .95;
+}
+
+/* 問一下 */
+/* option{
+    border: 0;
+    border-radius: 10px;
+} */
+
+.product-list {
+  display: flex;
+  /* gap: 48px;                               卡片之間的間距，可自行調整 */
+  max-width: 1000px;                       /* 總寬度不超過1000px */
+  margin: 0 auto;                     /* 置中 */
+}
+
+.product-card {
+  display: flex;
+  gap: 12px;
+  width: 228px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+}
+
+.product-card-text {
+  padding: 12px;
+}
+
+.pd-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e60000;
+}
+
+.icon-fav i, 
+.icon-cart i {
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+.icon-fav i:hover, 
+.icon-cart i:hover {
+  color: #e60000;
+}

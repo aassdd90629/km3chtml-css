@@ -1,4 +1,3 @@
-@import url('reset.css');
 
 
 /* header */
@@ -27,6 +26,7 @@ header{
     width: 1200px;
     align-items: center;
     /* justify-content: space-between; */
+    margin: 0 auto;
 
 }
 
@@ -75,25 +75,32 @@ header{
   padding: 4px 10px;
   text-decoration: none; 
   color:#2f3fb8;
+  z-index: 10;
 }
 .nav a::after{
   content:"";
   position:absolute;
+  /* 偽元素導致斷點解法 */
+  display: block;
   left:50%; 
-  bottom:-6px; 
+  bottom:-2px; 
   width:0; 
   height:2px;
   background: currentColor;
   transition: width .25s ease, left .25s ease;
+  z-index: -1;
+  pointer-events: none;
+  
+  
 }
 .nav a:hover::after,
 .nav a:focus-visible::after{
-  left:0; width:100%; 
+  left:0; width:100%;
+  /* 偽元素導致斷點解法 */
+  pointer-events: none; 
 }
 
-.dropdown{
-  display: none;
-}
+
 /* login往左靠 */
 .login{
   margin-left: auto;
@@ -106,6 +113,48 @@ header{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.nav-link:nth-child(2){
+  position: relative;
+}
+
+.dropdown{
+  position: absolute;
+  top: 115%;    
+}
+.dropdown > ol{
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 96px;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #cfcfcf;
+  z-index: 10;
+
+}
+.dropdown > ol > li > a{
+  display: block;
+  text-align: center;
+  padding: 10px 14px; 
+  color:#2f3fb8;
+  text-decoration: none;
+  position: relative;
+}
+
+
+.dropdown > ol > li > a::after{
+  content:"";
+  position:absolute;
+  bottom: 4px;
+  background: currentColor;
+  transition: width .25s ease, left .25s ease;
+}
+
+.nav-link:hover > .dropdown > ol{
+  display: block;
 }
 
 
