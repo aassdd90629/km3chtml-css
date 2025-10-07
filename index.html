@@ -67,11 +67,10 @@
             </a>
           </li>
           <!-- 再用js寫出彈出式視窗跟會員專區 -->
-          <li class="memberlogin"><button class="person"><i class="fa-solid fa-user"></i></button></li>
+          <li class="memberlogin"><button onclick="window.location.href='menubar.html'" class="person"><i class="fa-solid fa-user"></i></button></li>
         </ul> 
       </div>
     </div>
-
   </header>
 <!-- banner -->
 <div id="carouselExampleIndicators" class="carousel" data-interval="3500">
@@ -100,45 +99,7 @@
   
 
 
-<!-- <div id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="3500"
-      data-bs-pause="hover"
-      data-bs-touch="true">
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/banner/banner_keyboard.jpg" class="d-block w-100" alt="Keyboard banner">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_keyboard1.png" class="d-block w-100" alt="Keyboard banner 2">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_mouse.jpg" class="d-block w-100" alt="Mouse banner">
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">上一張</span>
-    </button>
-    <button class="carousel-control-next" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">下一張</span>
-    </button>
-  </div> -->
 <!-- 主內容 -->
   <section class="promo">
     <div class="text">
@@ -166,10 +127,128 @@
     </div>
   </section>
   <section class="promo">
+
     <div class="text">
       <div class="text-h2-1">
-        <i class="fa-solid fa-keyboard"></i>
-        <h2>優惠商品</h2>
+        <i class="fa-solid fa-computer-mouse"></i>
+        <h2>新品上市</h2>
+      </div>
+      <div class="text-h2-2">
+        <a href="product-list.html" class="pd-more">查看更多</a>
+      </div>
+    </div>
+    <!-- card 1 -->
+    <div class="promo-card">
+      <div class="img-wrap">
+        <img src="img/prouct/鍵盤1.jpg" alt="機械遊戲鍵盤 - 範例圖 1">
+      </div>
+    <!-- card 2 -->
+      <div class="img-wrap">
+        <img src="img/prouct/鍵盤2.jpg" alt="復古無線鍵鼠 - 範例圖 2">
+      </div>
+    <!-- card 3 -->
+      <div class="img-wrap">
+        <img src="img/prouct/鍵盤3.jpg" alt="RGB 鍵盤 - 範例圖 3">
+      </div>
+    </div>
+  </section>
+  
+  <!-- filter -->
+   
+
+  <section class="filter">
+    <div class="filtercontain">
+      <div class="filteritems">
+        <!-- filter Items -->
+        <nav>
+          <div class="items">
+            <span class="item active" data-name="all">All</span>
+            <span class="item" data-name="Keyboard">電競鍵盤</span>
+            <span class="item" data-name="Mouse">電競滑鼠</span>
+            <span class="item" data-name="Earphone">無線耳機</span>
+            <span class="item" data-name="other">其他周邊</span>
+
+
+          </div>
+        </nav>
+        <!-- filter Images -->
+        <div class="gallery" data-aos="fade-up" data-aos-duration="500">
+          <div class="image" data-name="Keyboard">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Keyboard">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Keyboard">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Mouse">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Mouse">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Mouse">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Mouse">
+            <span>
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+            </span>
+          </div>
+          <div class="image" data-name="Earphone">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="Earphone">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="Earphone">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="Earphone">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="Earphone">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="other">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="other">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="other">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+          <div class="image" data-name="other">
+            <span><img src="img/prouct/鍵盤3.jpg" alt=""></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  
+  <section class="promo">
+    <div class="text">
+      <div class="text-h2-1">
+        <i class="fa-solid fa-video"></i>
+        <h2>熱門影片</h2>
       </div>
       <div class="text-h2-2">
         <a href="product-list.html" class="pd-more">查看更多</a>
@@ -288,56 +367,7 @@
  
 </footer>
 		
-		
-<!-- Bootstrap 5 JS（bundle 版） -->
-<script>
-const carousel = document.getElementById('carouselExampleIndicators');
-const track = carousel.querySelector('.carousel-inner');
-const slides = carousel.querySelectorAll('.carousel-item');
-const prevBtn = carousel.querySelector('.carousel-control-prev');
-const nextBtn = carousel.querySelector('.carousel-control-next');
-const indicators = carousel.querySelectorAll('.carousel-indicators button');
-
-let current = 0;
-const total = slides.length;
-const interval = carousel.dataset.interval ? parseInt(carousel.dataset.interval) : 3500;
-let timer;
-
-// 更新畫面
-function goTo(index){
-  current = (index + total) % total;
-  track.style.transform = `translateX(-${current * 100}%)`;
-  indicators.forEach(btn => btn.classList.remove('active'));
-  indicators[current].classList.add('active');
-}
-
-// 自動播放
-function start(){
-  stop();
-  timer = setInterval(() => goTo(current + 1), interval);
-}
-function stop(){
-  if(timer) clearInterval(timer);
-}
-
-// 左右按鈕
-nextBtn.addEventListener('click', () => { goTo(current + 1); start(); });
-prevBtn.addEventListener('click', () => { goTo(current - 1); start(); });
-
-// 指示點點擊
-indicators.forEach((btn, i) => btn.addEventListener('click', () => {
-  goTo(i);
-  start();
-}));
-
-// 滑鼠暫停
-carousel.addEventListener('mouseenter', stop);
-carousel.addEventListener('mouseleave', start);
-
-// 初始化
-goTo(0);
-start();
-</script>
+<script src="JS/autoplay.js"></script>		
 
 
 </body>
