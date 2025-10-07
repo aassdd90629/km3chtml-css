@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/header.css">
-  
-
+  <link rel="stylesheet" href="css/banner.css">
 </head>
+
 <body>
   <!-- header -->
   <header>
@@ -60,7 +60,7 @@
       
       <div class="login">
         <ul>
-          <li class="search"></i><input type="search" placeholder="找到您的商品"><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li class="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input type="search" placeholder="找到您的商品"></li>
           <li class="cart">
             <a href="cart.html">
               <i class="fas fa-shopping-cart"></i>
@@ -71,10 +71,9 @@
         </ul> 
       </div>
     </div>
-
   </header>
-<!-- banner -->
-<div id="carouselExampleIndicators" class="carousel" data-interval="3500">
+
+  <div id="carouselExampleIndicators" class="carousel" data-interval="3500">
   <div class="carousel-indicators">
     <button data-slide-to="0" class="active"></button>
     <button data-slide-to="1"></button>
@@ -97,107 +96,9 @@
   <button class="carousel-control-next" aria-label="下一張">&rarr;</button>
 </div>
 
-  
 
 
-<!-- <div id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="3500"
-      data-bs-pause="hover"
-      data-bs-touch="true">
-
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/banner/banner_keyboard.jpg" class="d-block w-100" alt="Keyboard banner">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_keyboard1.png" class="d-block w-100" alt="Keyboard banner 2">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_mouse.jpg" class="d-block w-100" alt="Mouse banner">
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">上一張</span>
-    </button>
-    <button class="carousel-control-next" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">下一張</span>
-    </button>
-  </div> -->
-<!-- 主內容 -->
-  <section class="promo">
-    <div class="text">
-      <div class="text-h2-1">
-        <i class="fa-solid fa-keyboard"></i>
-        <h2>優惠商品</h2>
-      </div>
-      <div class="text-h2-2">
-        <a href="product-list.html" class="pd-more">查看更多</a>
-      </div>
-    </div>
-      <!-- card 1 -->
-    <div class="promo-card">
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤1.jpg" alt="機械遊戲鍵盤 - 範例圖 1">
-      </div>
-    <!-- card 2 -->
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤2.jpg" alt="復古無線鍵鼠 - 範例圖 2">
-      </div>
-    <!-- card 3 -->
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤3.jpg" alt="RGB 鍵盤 - 範例圖 3">
-      </div>
-    </div>
-  </section>
-  <section class="promo">
-    <div class="text">
-      <div class="text-h2-1">
-        <i class="fa-solid fa-keyboard"></i>
-        <h2>優惠商品</h2>
-      </div>
-      <div class="text-h2-2">
-        <a href="product-list.html" class="pd-more">查看更多</a>
-      </div>
-    </div>
-    <!-- card 1 -->
-    <div class="promo-card">
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤1.jpg" alt="機械遊戲鍵盤 - 範例圖 1">
-      </div>
-    <!-- card 2 -->
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤2.jpg" alt="復古無線鍵鼠 - 範例圖 2">
-      </div>
-    <!-- card 3 -->
-      <div class="img-wrap">
-        <img src="img/prouct/鍵盤3.jpg" alt="RGB 鍵盤 - 範例圖 3">
-      </div>
-    </div>
-  </section>
-  
-    
-    
-    
-
-
-
-<footer>
+  <footer>
     <div class="containerfooter" >
         <div class="footer-container">
           <div class="info-logo">
@@ -287,9 +188,7 @@
 
  
 </footer>
-		
-		
-<!-- Bootstrap 5 JS（bundle 版） -->
+
 <script>
 const carousel = document.getElementById('carouselExampleIndicators');
 const track = carousel.querySelector('.carousel-inner');
@@ -338,7 +237,6 @@ carousel.addEventListener('mouseleave', start);
 goTo(0);
 start();
 </script>
-
 
 </body>
 </html>

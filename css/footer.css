@@ -1,31 +1,10 @@
 @import url('reset.css');
 
 /* footer */
-/* footer{ */
-    /* 固定 */
-    /* display: flex;
-    background-color: #60C7FA;
-    backdrop-filter: blur(5px);
-    width: 100%;
-    height: 300px;
-    z-index: 1000;
-    margin-top: 8px; */
-    /* box-shadow: 0px 5px 5px 0px #77adff40; */
-    /* align-items: center;
-    justify-content: center;
-    display: block;
-    unicode-bidi: isolate;
-} */
 
-/* .containerfooter{
-    display: flex;
-    width: 1200px;
-    height: 300px;
-} */
 
-/* ========== 基本設定 ========== */
 footer{
-  background: #60C7FA;              /* 淺藍底 */
+  background: #60C7FA;              
   font-family: "Noto Sans TC", system-ui, "Segoe UI", "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
                "微軟正黑體", sans-serif;
   color: #111;
@@ -42,7 +21,7 @@ footer{
   gap: 116px;        
 }
 
-/* 5 欄寬度配置：左 1 欄較寬、中間 3 欄固定寬、右側 QR 固定寬 */
+
 .footer-container{
     width: 288px;
     height: 185px;
@@ -52,7 +31,7 @@ footer{
     padding-top: 48px;
 }
 
-/* ========== 左側資訊區（logo + 文案 + 聯絡資訊） ========== */
+/* 左側資訊區 */
 .info-logo{ 
     padding-top: 48px;
     display: flex; 
@@ -74,10 +53,10 @@ footer{
     width: 188px;
     height: 48px;
   line-height: 1.6;
-  font-weight: 700;                 /* 粗體對應截圖標語 */
+  font-weight: 700;                 
 }
 
-/* 地址/電話/信箱/網站：icon 與文字橫向排列 */
+/* icon.文字*/
 .info{
     width: 285px;
     height: 165px;
@@ -103,13 +82,12 @@ footer{
 
 .address span{ 
     font-weight: 800; 
-}  /* 截圖中的粗黑字 */
+} 
 .tel span, .email span, .web span{ 
     font-weight: 700; 
     font-size: 16px;
 }
 
-/* ========== 中間 3 欄連結 ========== */
 .info-about .p-title{
   font-size: 20px;
   font-weight: 800;
@@ -134,7 +112,7 @@ footer{
   text-decoration: underline;
 }
 
-/* ========== 右側 LINE QR ========== */
+/* LINE QR  */
 .line{
     padding-top: 48px;
     width: 184px;                    
@@ -146,7 +124,7 @@ footer{
     height: 206px;        
 }
 
-/* ========== 版權列（細黑線 + 置中小字） ========== */
+/* 版權列 */
 .container-copyright{
   width: 1200px;
   margin: 0 auto;
