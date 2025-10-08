@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/product.css">
   <!-- !JS -->
 
 </head>
@@ -61,19 +62,20 @@
       
       <div class="login">
         <ul>
-          <li class="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input type="search" placeholder="找到您的商品"></li>
+          <li class="search"><input type="search" placeholder="找到您的商品"><i class="fa-solid fa-magnifying-glass" ></i></li>
           <li class="cart">
             <a href="cart.html">
               <i class="fas fa-shopping-cart"></i>
             </a>
           </li>
           <!-- 再用js寫出彈出式視窗跟會員專區 -->
-          <li class="memberlogin"><button onclick="window.location.href='menubar.html'" class="person"><i class="fa-solid fa-user"></i></button></li>
+          <li class="memberlogin"><button onclick="window.location.href='member.html'" class="person"><i class="fa-solid fa-user"></i></button></li>
         </ul> 
       </div>
     </div>
   </header>
-
+<!-- banner -->
+<section>
   <div id="carouselExampleIndicators" class="carousel" data-interval="3500">
   <div class="carousel-indicators">
     <button data-slide-to="0" class="active"></button>
@@ -95,7 +97,81 @@
 
   <button class="carousel-control-prev" aria-label="上一張">&larr;</button>
   <button class="carousel-control-next" aria-label="下一張">&rarr;</button>
-</div>
+  </div>
+</section>
+
+<section>
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><i class="fa-solid fa-angles-right"></i></li>
+          <li>優惠專區</li>
+        </ul>
+      </div>
+</section>
+
+<section>
+
+        <div class="product-list-promo">
+          <div class="product-card">
+            <a href="product-detail.html">
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+                <div class="product-card-text">
+                  <h3>耐衝擊硬式保護殼V2</h3>
+                  <p>指定商品+加購區，可享加購區每件優惠價NT$1，折扣可循環累...</p>
+                      <div class="card-bottom">
+                      <div class="price">$390</div>
+                      <div class="icon-fav">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                    </div>
+                </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="product-detail.html">
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+                <div class="product-card-text">
+                  <h3>耐衝擊硬式保護殼V2</h3>
+                  <p>指定商品+加購區，可享加購區每件優惠價NT$1，折扣可循環累...</p>
+                      <div class="card-bottom">
+                      <div class="price">$390</div>
+                      <div class="icon-fav">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                    </div>
+                </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="product-detail.html">
+              <img src="img/prouct/鍵盤1.jpg" alt="">
+                <div class="product-card-text">
+                  <h3>耐衝擊硬式保護殼V2</h3>
+                  <p>指定商品+加購區，可享加購區每件優惠價NT$1，折扣可循環累...</p>
+                      <div class="card-bottom">
+                      <div class="price">$390</div>
+                      <div class="icon-fav">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                    </div>
+                </div>
+            </a>
+          </div>
+          
+        </div>
+      </div>   
+</section>
+
 
 
 
