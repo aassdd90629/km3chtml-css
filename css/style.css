@@ -1,9 +1,15 @@
 @import url('reset.css');
 
+body{
+  background-color: #FBF5F5;
+}
+
+
 section{
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 
 /* banner */

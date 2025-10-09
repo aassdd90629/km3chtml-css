@@ -80,16 +80,29 @@
   cursor: pointer;
 }
 
-.drown-list i{
-  margin-left: 8px;
-  font-size: 14px;
-  vertical-align: middle;
-  opacity: .9;
+.drown-list > ul{
+  display: none;
+  padding: 10px 8px;
+  line-height: 1.35;
+  font-size: 20px;             
+  border-radius: 10px;
 }
 
-.drown-list:hover{
-  background: rgba(0,0,0,.05);
+.drown-list i{
+  margin-left: 12px;
+  font-size: 14px;
+  padding-bottom: 4px;
+
 }
+
+
+
+.drown-list:hover{
+  background: #60C7FA;
+}
+
+
+
 
 /*  下面篩選 */
 .select-wrap{ 
@@ -140,7 +153,8 @@
   gap: 48px;                               
   max-width: 1000px;                       
   margin: 0 32px;  
-  flex-direction: column;                   
+  flex-direction: column;
+  justify-content: space-between;                  
 }
 .product-list-promo{
   display: flex;
@@ -148,14 +162,17 @@
   justify-content: space-between;
   padding-right: 32px;
   padding-left: 32px;
-
-
 }
 
+.fix-product{
+  display: flex;
+  margin: 0 auto;
+  
+}
 .product-card {
   display: flex;
   gap: 12px;
-  width: 228px;
+  width: 240px;
   background: #60C7FA;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -221,10 +238,10 @@
 .pagination-g {
 
     /* 設定成跟商品列等寬 */
-    width: 876px;
+    width: 912px;
     display: flex;
     /* 先將這邊推到跟商品列等距 */
-    padding-left: 224px;
+    padding-left: 256px;
     margin-top: 32px;
     
 }
@@ -239,4 +256,153 @@
     float: left;
     padding: 8px 16px;
     text-decoration: none;
+}
+
+/* product-detail */
+
+/* 整體 */
+.product-detail-top{
+  width: 984px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  padding-bottom: 16px;
+}
+
+/* 左側圖片區  */
+.product-detail-img{
+  max-width: 484px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.product-detail-img-big{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.product-detail-img-big img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 小圖片 */
+.product-detail-img-small{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.product-detail-img-small img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #eaeaea;
+  background: #fff;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.product-detail-img-small img:hover{
+  transform: translateY(-2px);
+  border-color: #0fdad0;
+  box-shadow: 0 6px 18px rgba(15,218,208,.18);
+}
+
+/* 右側文字 */
+/* .product-detail-caption{
+  max-width: 484px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+  color: #111;
+} */
+
+.product-detail-caption{
+  max-width: 484px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #111;
+}
+
+.product-detail-caption h2{
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-detail-caption ul{
+  margin-top: 32px;
+  padding-left: 1.1em;  
+  display: grid;
+  gap: 24px;
+  font-size: 18px;
+  color: #222;
+}
+
+/* 按鈕 */
+.product-cta{
+  display: flex;
+  margin-top: 288px;
+  gap: 24px;
+  justify-content: center;
+}
+
+.product-cta button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 64px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 1;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  /* 注意 */
+  user-select: none;
+
+  white-space: nowrap;
+}
+
+.btn-outline-love{
+  background: #fff;
+  color: #111;
+  border: 2px solid #d9d9d9;
+}
+
+.btn-outline-love:hover{
+  border-color: #60C7FA;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+
+.btn-primary-cart{
+  background: #60C7FA;
+  color: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 26px rgba(8, 190, 182, .25);
+}
+
+.btn-primary-cart:hover{
+  background: #5debe6;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(8, 190, 182, .35);
+}
+
+
+.product-cta i{
+  font-size: 1em; 
+  line-height: 1;
 }
