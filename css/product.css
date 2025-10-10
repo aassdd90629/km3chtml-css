@@ -61,7 +61,7 @@
 .filter-in-left{
   width: 200px;             
   background: #fff;
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 18px 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,.06);
   box-sizing: border-box;
@@ -95,14 +95,9 @@
 
 }
 
-
-
 .drown-list:hover{
   background: #60C7FA;
 }
-
-
-
 
 /*  下面篩選 */
 .select-wrap{ 
@@ -115,7 +110,6 @@
   margin-bottom: 10px;
 }
 
-/* select */
 .select{
   display: block;
   width: 168px;
@@ -127,7 +121,7 @@
   font-size: 16px;
   font-weight: 600;
   outline: none;
-  appearance: none;     /* 移除原生箭頭 */
+  appearance: none;     
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
 }
 
@@ -174,9 +168,14 @@
   gap: 12px;
   width: 240px;
   background: #60C7FA;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow: hidden;
+}
+
+.product-card a{
+  text-decoration: none;
+  color: #000;
 }
 
 .product-card img {
@@ -236,7 +235,6 @@
 }
 
 .pagination-g {
-
     /* 設定成跟商品列等寬 */
     width: 912px;
     display: flex;
@@ -260,16 +258,21 @@
 
 /* product-detail */
 
-/* 整體 */
+/* 上方 */
 .product-detail-top{
   width: 984px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  gap: 28px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
-  padding-bottom: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* 左側圖片區  */
@@ -281,6 +284,7 @@
 }
 
 .product-detail-img-big{
+  border: 2px solid #eaeaea;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
@@ -304,7 +308,7 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 2px solid #eaeaea;
   background: #fff;
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
@@ -339,6 +343,7 @@
   font-weight: 700;
   margin: 0;
 }
+
 
 .product-detail-caption ul{
   margin-top: 32px;
@@ -405,4 +410,120 @@
 .product-cta i{
   font-size: 1em; 
   line-height: 1;
+}
+
+
+/* 中間 */
+.product-detail-down {
+  width: 984px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: "Noto Sans TC", sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  
+}
+
+/* 標題 */
+.down-up h2 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 28px;
+  position: relative; 
+}
+
+
+.down-up h2::after{
+  content: "";
+  display: block;
+  width: 100%;      
+  height: 1px;
+  background: #000;
+  margin-top: 12px;
+}
+
+
+.down-img {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 0px 28px;
+
+}
+
+.down-img img {
+  width: calc(50% - 10px);
+  /* 自動算 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; */
+  border-radius: 8px;
+  display: block;
+}
+
+
+.down-caption {
+  line-height: 1.8;
+  font-size: 15px;
+  padding: 0px 28px;
+}
+
+.down-caption br {
+  line-height: 1.5;
+}
+
+/* product-caption */
+
+.product-caption{
+  width: 984px;
+  margin: 0 auto;
+  background:#fff;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ===== 上方分頁列 ===== */
+.product-caption-nav{
+  padding: 16px;
+  background:#fff;
+  position: relative;
+}
+.product-caption .tabs{
+  display:flex;
+}
+.product-caption .tab{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 26px;
+  font-size: 24px;
+  line-height: 1;
+  color:#000;
+  background:#fff;
+  border: 1px solid #000;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  text-decoration:none;
+}
+
+.product-caption-nav::after{
+  content: "";
+  display: block;
+  width: 100%;    
+  height: 1px;
+  background: #000;
+}
+
+/* ===== 內容區 ===== */
+.product-caption-contain{
+  padding: 28px 32px 36px;
+  background:#fff;
+}
+.product-caption-contain li{
+  font-size: 20px;  
+  line-height: 1.5;
+  margin: 6px 0;
 }

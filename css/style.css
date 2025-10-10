@@ -357,13 +357,21 @@ section{
 
 .about-detail-up h2{
     font-size: 32px;
-    padding: 20px 0;
-    padding-left: 8px;
-    border-bottom: 1px solid #818181;
+    padding: 20px 0px;
     margin-bottom: 20px;
-    width: 100%;
     color: #484848;
+    position: relative;
 }
+
+.about-detail-up h2::after{
+  content: "";
+  display: block;
+  width: 100%;      
+  height: 1px;
+  background: #000;
+  margin-top: 24px;
+}
+
 
 .about-detail-down > span > p{
     padding-top: 32px;
