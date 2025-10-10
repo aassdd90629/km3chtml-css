@@ -482,10 +482,9 @@
   background:#fff;
   border: 0;
   border-radius: 10px;
-  overflow: hidden;
 }
 
-/* ===== 上方分頁列 ===== */
+/* 上方分頁列 */
 .product-caption-nav{
   padding: 16px;
   background:#fff;
@@ -499,14 +498,12 @@
   align-items:center;
   justify-content:center;
   padding: 14px 26px;
-  font-size: 24px;
-  line-height: 1;
+  font-size: 20px;
   color:#000;
   background:#fff;
   border: 1px solid #000;
   border-bottom: 0;
   border-radius: 10px 10px 0 0;
-  text-decoration:none;
 }
 
 .product-caption-nav::after{
@@ -517,13 +514,12 @@
   background: #000;
 }
 
-/* ===== 內容區 ===== */
 .product-caption-contain{
   padding: 28px 32px 36px;
   background:#fff;
 }
 .product-caption-contain li{
-  font-size: 20px;  
+  font-size: 16px;  
   line-height: 1.5;
   margin: 6px 0;
 }
