@@ -82,14 +82,14 @@ section{
 .forallbanner {
   width: 1200px; 
   height: 400px;
-  overflow: hidden;   /* 超出部分隱藏 */
+  overflow: hidden;   
 }
 
 .forallbanner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* 保持比例填滿 */
-  object-position: center;   /* 顯示正中間 */
+  object-fit: cover;         
+  object-position: center;   
 }
 
 /* .carousel-control-prev-icon{
@@ -243,12 +243,12 @@ section{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 16px;              /* 按鈕大小縮小 */
-  /* border: 1.5px solid #ffffff;   白邊框 */
-  /* border-radius: 999px;          膠囊 */
+  padding: 6px 16px;              
+  /* border: 1.5px solid #ffffff; */
+  /* border-radius: 999px; */
   background: transparent;
   color: #fff;
-  font-size: 16px;               /* 字體縮小 */
+  font-size: 16px;              
   font-weight: 500;
   cursor: pointer;
   transition: all .25s ease;
@@ -272,7 +272,7 @@ section{
 
 .items span.active {
   border: 1.5px solid #ffffff;  
-  border-radius: 999px;              /* 主色 */
+  border-radius: 999px;              
 }
 
 /* 圖片區 */
@@ -406,7 +406,7 @@ section{
 
 /* 註冊區 */
 
-/* ===== 註冊卡片版型（660px） ===== */
+
 .register-contain{
   display:flex;
   justify-content:center;
@@ -474,12 +474,12 @@ section{
   box-shadow:0 0 0 2px rgba(59,130,246,.14);
 }
 
-/* 隱藏結構用 hr */
+
 .register-from hr{ 
   display:none; 
 }
 
-/* 條款 */
+
 .register-from .terms{
   display:flex;
   align-items:center;
@@ -495,7 +495,6 @@ section{
 
 
 
-/* 主要按鈕 */
 .register-from .registerbtn{
   width:100%;
   height:52px;
@@ -509,7 +508,7 @@ section{
 
 
 
-/* 底部登入提示 */
+
 .to-signin{
   text-align:center;
   margin-top:24px;

@@ -12,8 +12,12 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/product.css">
   
-
 </head>
+<style>
+  footer{
+    margin-top: 0;
+  }
+</style>
 <body>
   <!-- header -->
   <header>
@@ -84,6 +88,92 @@
       </ul>
     </div>
   </section>
+
+  <section>
+    <div class="cart-container">
+      <!-- 左側：商品清單 -->
+      <div class="cart-items">
+        <div class="cart-item">
+          <div class="item-left">
+            <img src="img/prouct/keyboard.jpg" alt="i-Rocks K74M 鍵盤">
+          </div>
+          <div class="item-info">
+            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
+            <div class="summary-row total">
+              <span>商品金額</span>
+              <span>NT$ 2990</span>
+            </div> 
+            <div class="item-actions">
+                <div class="quantity">
+                  <button class="qty-btn">−</button>
+                  <input type="text" value="1" readonly>
+                  <button class="qty-btn">+</button>
+                </div>
+              <button class="remove-btn">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <div class="item-left">
+            <img src="img/prouct/keyboard2.jpg" alt="i-Rocks K74M 鍵盤">
+          </div>
+          <div class="item-info">
+            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
+            <div class="summary-row total">
+              <span>商品金額</span>
+              <span>NT$ 2990</span>
+            </div> 
+            <div class="item-actions">
+              <div class="quantity">
+                <button class="qty-btn">−</button>
+                <input type="text" value="1">
+                <button class="qty-btn">+</button>
+              </div>
+              <button class="remove-btn">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：小計 -->
+      <div class="cart-summary">
+        <h3>小計明細</h3>
+        <hr>
+        <div class="summary-row">
+          <span>一般會員</span>
+        </div>
+        <div class="summary-row">
+          <span>商品金額</span>
+          <span>NT$ 5980</span>
+        </div>
+        <hr>
+        <div class="summary-row total">
+          <span>小計</span>
+          <span>NT$ 5980</span>
+        </div>
+
+        <button class="coupon-btn">選擇或是輸入優惠碼</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="checkout-bar-out">
+    <div class="checkout-bar">
+      <div class="checkout-inner">
+        <div class="subtotal">
+          <span class="subtotal-label">結帳金額</span>
+          <span class="subtotal-price">NT$ 5980</span>
+        </div>
+        <a class="btn-checkout" href="#"><span>前往結帳</span></a>
+      </div>
+    </div>
+  </section>
+  
+
+
 
   <footer>
     <div class="containerfooter" >
