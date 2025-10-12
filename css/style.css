@@ -151,7 +151,7 @@ section{
 
 /* 商品列 */
 .promo-card {
-  background-color: #60A3FA;
+  background-color: #60C7FA;
   width: 1200px;
   height: 360px;
   border-radius: 10px;
@@ -189,7 +189,7 @@ section{
 
 
 .video-wrap {
-  background-color: #60A3FA;
+  background-color: #60C7FA;
   width: 1200px;
   height: 360px;
   margin: 0 auto;
@@ -224,7 +224,7 @@ section{
   max-width: 1160px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #60A3FA;
+  background-color: #60C7FA;
   border-radius: 30px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 
@@ -442,7 +442,7 @@ section{
 
 .register-from label{
   display:block;
-  margin:18px 0 8px;
+  margin: 12px 0 12px;
   font-weight:600;
   font-size:14px;
   color:#2b3645;
@@ -484,7 +484,7 @@ section{
   display:flex;
   align-items:center;
   gap:10px;
-  margin:16px 0 20px;
+  margin:20px 0 20px;
   color:#6b7280;
   font-size:14px;
 }

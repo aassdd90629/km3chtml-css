@@ -16,6 +16,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	font-family: "Noto Sans TC", system-ui, "Segoe UI", "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
+               "微軟正黑體", sans-serif;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -27,6 +29,8 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	font-family: "Noto Sans TC", system-ui, "Segoe UI", "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
+               "微軟正黑體", sans-serif;
 }
 body {
 	line-height: 1;
