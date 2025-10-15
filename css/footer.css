@@ -44,16 +44,18 @@ footer{
   object-fit: contain;
 }
 
-.info-logo ul{ 
+.info-logo ul{
+  display: flex;
+  align-items: center;
     padding-left: 0px;
-    align-items: center;
+
 
 }
 .info-logo ul li{
     width: 188px;
     height: 48px;
-  line-height: 1.6;
-  font-weight: 700;                 
+    line-height: 1.6;
+    font-weight: 700;              
 }
 
 /* icon.文字*/
@@ -64,28 +66,29 @@ footer{
 }
 .address, .tel, .email, .web{
   display: flex;
-  align-items: flex-start;
   gap: 8px;
-  line-height: 1.4;
+  line-height: 1.5;
+  align-items: center;
 }
 
-.tel i, .email i, .web i{
+.address i, .tel i, .email i, .web i{
   width: 20px;
   height: 20px;
-  margin-top: 2px;
-}
-.address i{
-    width: 20px;
-    height: 20px;
-    margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.address span{ 
-    font-weight: 800; 
-} 
-.tel span, .email span, .web span{ 
+.address i{
+  margin-left: 4px;
+}
+
+.address span ,.tel span, .email span, .web span{ 
     font-weight: 700; 
     font-size: 16px;
+}
+.address span{
+  padding-left: 4px;
 }
 
 .info-about .p-title{

@@ -733,7 +733,7 @@ section.checkout-bar-out{
 }
 
 .checkout-inner{   
-  padding: 24px;            
+  padding:  36px 24px;            
   display: flex;
   align-items: center;
   justify-content: space-between;

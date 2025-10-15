@@ -17,62 +17,6 @@
 <body>
   <!-- header -->
   <header>
-    <div class="containerheader">
-      <div class="logo-container">
-        <div class="nav-logo">
-          <a href="index.html"><img alt="logo" width="100" height="60" src="img/header/log_2.png"></a>
-        </div>
-      </div>
-
-      <div class="nav">
-        <div class="nav-btn">
-          <ul>
-            <li class="nav-link">
-              <a href="promo.html">優惠活動</a>
-          </li>
-            <li class="nav-link">
-              <a href="product-list.html">尋找商品</a>
-                <div class="dropdown">
-                  <ol>
-                    <li class="dropdown.link">
-                      <a href="product-list.html">電競鍵盤</a>
-                    </li>
-                    <li class="dropdown.link">
-                      <a href="product-list.html">電競滑鼠</a>
-                    </li>
-                    <li class="dropdown.link">
-                      <a href="product-list.html">無線耳機</a>
-                    </li>
-                    <li class="dropdown.link">
-                      <a href="product-list.html">其他周邊</a>
-                    </li>
-                  </ol>
-                  
-                </div>              
-            </li>
-            <li class="nav-link">
-              <a href="about.html">關於我們</a>
-            </li>
-            <li class="nav-link">
-              <a href="register.html">會員專區</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="login">
-        <ul>
-          <li class="search"></i><input type="search" placeholder="找到您的商品"><i class="fa-solid fa-magnifying-glass"></i></li>
-          <li class="cart">
-            <a href="cart.html">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <!-- 再用js寫出彈出式視窗跟會員專區 -->
-          <li class="memberlogin"><button onclick="window.location.href='register.html'" class="person"><i class="fa-solid fa-user"></i></button></li>
-        </ul> 
-      </div>
-    </div>
   </header>
 
     <section>
@@ -126,94 +70,18 @@
   </section>
 
   <footer>
-    <div class="containerfooter" >
-        <div class="footer-container">
-          <div class="info-logo">
-              <img alt="logo" width="100" height="60" src="img/header/logo_black.png">
-            <ul>
-              <li>我們提供最優質的3C產品,<br>
-              給客戶最好的產品體驗。</li>
-            </ul>
-          </div>
-          <div class="info">
-            <div class="address">
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-              <span>
-                9F., No. 46, Fuxing Rd., Zhongli Dist.,<br>
-                Taoyuan City 320061, Taiwan (R.O.C.)
-              </span>
-            </div>
-            <div class="tel">
-              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-              <span>
-                +886 - 903196184
-              </span>
-            </div>
-            <div class="email">
-              <i class="far fa-envelope" aria-hidden="true"></i>
-              <span>
-                woo3cshop@gmail.com
-              </span>
-            </div>
-            <div class="web">
-              <i class="fas fa-globe-asia" aria-hidden="true"></i>
-              <span>
-                woo3cshop.com
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="info-text">
-          <div class="info-about">
-            <p class="p-title">關於我們</p>
-              <ul>
-                <li><a href="about.html">商店簡介</a> </li>
-                <li><a href="about.html">隱私權條款</a> </li>
-                <li><a href="about.html">聯絡我們</a> </li>
-              </ul>
-          </div>
-        </div>
-
-        <div class="info-text">
-          <div class="info-about">
-            <p class="p-title">購物說明</p>
-              <ul>
-                <li><a href="about.html">付費方式</a> </li>
-                <li><a href="about.html">運送方式</a> </li>
-                <li><a href="about.html">退換貨方式</a> </li>
-              </ul>
-          </div>
-        </div>
-
-        <div class="info-text">
-          <div class="info-about">
-            <p class="p-title">取得協助</p>
-              <ul>
-                <li><a href="about.html">常見問題</a></li>
-                <li><a href="about.html">會員權益</a></li>
-                <li><a href="about.html">使用者條款</a></li>
-              </ul>
-          </div>
-        </div>
-
-        <div class="line">
-          <img src="img/footer/lineqr.png" alt="qrcode">
-        </div>
-    </div>
-
-      <div class="container-copyright">
-          <div class="text">
-             <p>© 2025 logo Technologies Inc.</p>
-          </div>
-      </div>
-
-  </div>
-   
-
  
-</footer>
+  </footer>
 		
-<script src="JS/autoplay.js"></script>		
+<script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.querySelector('header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.querySelector('footer').innerHTML = data);
+</script>		
 
 
 </body>
