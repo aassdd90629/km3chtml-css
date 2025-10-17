@@ -1,39 +1,152 @@
-<div id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="3500"
-      data-bs-pause="hover"
-      data-bs-touch="true">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>下拉選單示範</title>
+<style>
+/* 導覽列容器 */
+.nav {
+  margin-left: 120px;
+  width: 496px;
+  height: 56px;
+  margin-top: 8px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-    </div>
+/* 每個按鈕 */
+.nav-btn {
+  position: relative;
+}
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/banner/banner_keyboard.jpg" class="d-block w-100" alt="Keyboard banner">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_keyboard1.png" class="d-block w-100" alt="Keyboard banner 2">
-      </div>
-      <div class="carousel-item">
-        <img src="img/banner/banner_mouse.jpg" class="d-block w-100" alt="Mouse banner">
-      </div>
-    </div>
+/* 主連結樣式 */
+.nav-btn > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 40px;
+  padding: 4px 10px;
+  text-decoration: none; 
+  color: #2f3fb8;
+  font-weight: bold;
+  position: relative;
+}
 
-    <button class="carousel-control-prev" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">上一張</span>
-    </button>
-    <button class="carousel-control-next" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">下一張</span>
-    </button>
+/* 底線動畫 */
+.nav-btn > a::after {
+  content:"";
+  position:absolute;
+  left:50%; 
+  bottom:-2px; 
+  width:0; 
+  height:2px;
+  background: currentColor;
+  transition: width .25s ease, left .25s ease;
+}
+.nav-btn > a:hover::after,
+.nav-btn.active > a::after {
+  left:0; 
+  width:100%;
+}
+
+/* 下拉選單 */
+.dropdown {
+  position: absolute;
+  top: 115%;    
+  left: 0;
+  z-index: 10;
+}
+
+.dropdown > ol {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 96px;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #cfcfcf;
+}
+
+.dropdown > ol > li > a {
+  display: block;
+  text-align: center;
+  padding: 10px 14px; 
+  color:#2f3fb8;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown > ol > li > a::after {
+  content:"";
+  position:absolute;
+  bottom: 4px;
+  background: currentColor;
+  transition: width .25s ease, left .25s ease;
+}
+
+.nav-btn.active > .dropdown > ol {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-btn">
+    <a href="promo.html">優惠活動</a>
   </div>
+
+  <div class="nav-btn">
+    <a href="#">尋找商品</a>
+    <div class="dropdown">
+      <ol>
+        <li><a href="product-list.html">電競鍵盤</a></li>
+        <li><a href="product-list.html">電競滑鼠</a></li>
+        <li><a href="product-list.html">無線耳機</a></li>
+        <li><a href="product-list.html">其他周邊</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="nav-btn">
+    <a href="about.html">關於我們</a>
+  </div>
+
+  <div class="nav-btn">
+    <a href="register.html">會員專區</a>
+  </div>
+</div>
+
+<script>
+// 點擊控制下拉選單
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault(); // 阻止 a 連結跳轉
+    e.stopPropagation();
+
+    // 關掉其他展開選單
+    document.querySelectorAll('.nav-btn.active').forEach(activeBtn => {
+      if (activeBtn !== btn) activeBtn.classList.remove('active');
+    });
+
+    // 切換當前選單
+    btn.classList.toggle('active');
+  });
+});
+
+// 點空白處關閉下拉選單
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-btn.active').forEach(btn => {
+    btn.classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>

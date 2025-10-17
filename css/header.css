@@ -48,56 +48,52 @@ header{
   width: 496px;
   height: 56px;
   margin-top: 8px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
 
 }
 
 
-.nav-btn ul{
+
+.nav-link{
+  padding-top: 16px;
+}
+
+.nav-btn { 
+  position: relative; 
+}
+.nav-btn a{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.nav-btn ul li{
-  display: flex;
-  flex-grow: 1;
-
-}
-.nav-link{
-  padding-top: 16px;
-  list-style-type: none;
-}
-
-
-.nav a{
-  width: 64px;
-  height: 16px;
+  width: 124px;
+  height: 40px;
   position: relative;
   padding: 4px 10px;
   text-decoration: none; 
   color:#2f3fb8;
   z-index: 10;
 }
-.nav a::after{
+.nav-btn > a::after{
   content:"";
   position:absolute;
-  /* 偽元素導致斷點解法 */
   display: block;
   left:50%; 
-  bottom:-2px; 
+  bottom:2px; 
   width:0; 
   height:2px;
   background: currentColor;
   transition: width .25s ease, left .25s ease;
   z-index: -1;
   pointer-events: none;
-  
-  
 }
-.nav a:hover::after,
-.nav a:focus-visible::after{
+
+.nav-btn > a:hover::after,
+.nav-btn > a:focus-visible::after{
   left:0; width:100%;
-  /* 偽元素導致斷點解法 */
-  pointer-events: none; 
+  
 }
 
 
@@ -114,49 +110,84 @@ header{
   margin: 0;
   padding: 0;
 }
-.nav-link:nth-child(2){
+.nav-btn:nth-child(2){
   position: relative;
 }
 
 .dropdown{
   position: absolute;
-  top: 115%;    
+  top: 115%;
 }
-.dropdown > ol{
-  display: none;
-  position: absolute;
-  left: 0;
-  width: 96px;
+
+/* 改這段：用透明＋位移控制進出場 */
+.dropdown{
+  position: absolute;             
   list-style: none;
+  width: 144px;
+  height: 200px;
   margin: 0;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #cfcfcf;
+  background: rgba(255, 255, 255, 0.95);
+  outline: 1px solid #cfcfcf;
   z-index: 10;
-
+  opacity: 0;
+  transform: translateY(6px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+  /* ↑ visibility 延遲到 0.2s 後再隱藏，避免閃爍 */
+  transition-delay: .25s;       /* ← 預設給「離場」的延遲 */
 }
 
-.dropdown > ol > li > a{
-  display: block;
-  text-align: center;
-  padding: 10px 14px; 
+.dropdown-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 50px;
+  position: relative;
+  text-decoration: none; 
   color:#2f3fb8;
-  text-decoration: none;
+  z-index: 10;
   position: relative;
 }
 
+.dropdown-link > a{
+  width: 144px;
+  height: 32px;
+  padding: 0 0 2px 0;
+  
+}
 
-.dropdown > ol > li > a::after{
+.nav-btn:hover .dropdown ,
+.nav-btn:focus-within .dropdown ,
+.nav-btn .dropdown:hover{
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s; 
+  }       /* ← 進場不延遲 */
+
+.dropdown-link > a::after{
   content:"";
   position:absolute;
-  bottom: 4px;
+  display: block;
+  left:50%;
+  height: 2px;
+  width: 0;
+  bottom: -2px;
   background: currentColor;
   transition: width .25s ease, left .25s ease;
+  z-index: -1;
+  pointer-events: none;
 }
 
-.nav-link:hover > .dropdown > ol{
-  display: block;
+.dropdown-link > a:hover::after,
+.dropdown-link > a:focus-visible::after{
+  left: 16px;
+  width: 80%;
 }
+
 
 
 /* 搜尋列 */
