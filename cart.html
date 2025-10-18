@@ -36,13 +36,13 @@
   <section>
     <div class="cart-container">
       <div class="cart-items">
-        <div class="cart-item">
+        <div class="cart-item" data-id="k47m">
           <div class="item-left">
             <img src="img/prouct/keyboard.jpg" alt="i-Rocks K74M 鍵盤">
           </div>
           <div class="item-info">
             <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
-            <div class="summary-row total">
+            <div class="summary-row total" data-price="2990">
               <span>商品金額</span>
               <span>NT$ 2990</span>
             </div> 
@@ -52,18 +52,19 @@
                   <input type="text" value="1" readonly>
                   <button class="qty-btn">+</button>
                 </div>
-              <button class="remove-btn">✕</button>
+              <button class="love-btn">追蹤</button>
+              <button class="remove-btn">刪除</button>
             </div>
           </div>
         </div>
 
-        <div class="cart-item">
+        <div class="cart-item" data-id="k47m">
           <div class="item-left">
             <img src="img/prouct/keyboard2.jpg" alt="i-Rocks K74M 鍵盤">
           </div>
           <div class="item-info">
             <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
-            <div class="summary-row total">
+            <div class="summary-row total" data-price="2990">
               <span>商品金額</span>
               <span>NT$ 2990</span>
             </div> 
@@ -73,11 +74,36 @@
                 <input type="text" value="1">
                 <button class="qty-btn">+</button>
               </div>
-              <button class="remove-btn">✕</button>
+              <button class="love-btn">追蹤</button>
+              <button class="remove-btn">刪除</button>
             </div>
           </div>
         </div>
       </div>
+      <!-- JS複製的模板 當導入js後上面內容須刪除 -->
+      <template id="cart-item-template">
+        <div class="cart-item" data-id="k47m">
+          <div class="item-left">
+            <img src="img/prouct/keyboard2.jpg" alt="i-Rocks K74M 鍵盤">
+          </div>
+          <div class="item-info">
+            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
+            <div class="summary-row total" data-price="2990">
+              <span>商品金額</span>
+              <span>NT$ 2990</span>
+            </div> 
+            <div class="item-actions">
+              <div class="quantity">
+                <button class="qty-btn">−</button>
+                <input type="text" value="1">
+                <button class="qty-btn">+</button>
+              </div>
+              <button class="love-btn">追蹤</button>
+              <button class="remove-btn">刪除</button>
+            </div>
+          </div>
+        </div>
+      </template>
 
 
       <div class="cart-summary">
@@ -96,7 +122,7 @@
           <span>NT$ 5980</span>
         </div>
 
-        <button class="coupon-btn">選擇或是輸入優惠碼</button>
+        <button class="coupon-btn">輸入優惠碼</button>
       </div>
     </div>
   </section>

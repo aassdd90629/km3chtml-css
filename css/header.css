@@ -52,7 +52,7 @@ header{
   flex-grow: 1;
   align-items: center;
   justify-content: flex-start;
-
+  cursor: pointer;
 }
 
 
@@ -88,6 +88,7 @@ header{
   transition: width .25s ease, left .25s ease;
   z-index: -1;
   pointer-events: none;
+
 }
 
 .nav-btn > a:hover::after,
@@ -114,10 +115,13 @@ header{
   position: relative;
 }
 
-.dropdown{
-  position: absolute;
-  top: 115%;
+.nav-btn > a > i{
+  align-items: center;
+  padding-left: 4px;
+  padding-bottom: 4px;
 }
+
+
 
 /* 改這段：用透明＋位移控制進出場 */
 .dropdown{
@@ -133,9 +137,9 @@ header{
   transform: translateY(6px);
   visibility: hidden;
   pointer-events: none;
+  cursor: pointer;
   transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
-  /* ↑ visibility 延遲到 0.2s 後再隱藏，避免閃爍 */
-  transition-delay: .25s;       /* ← 預設給「離場」的延遲 */
+  transition-delay: .25s;       
 }
 
 .dropdown-link{
@@ -149,12 +153,14 @@ header{
   color:#2f3fb8;
   z-index: 10;
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-link > a{
   width: 144px;
   height: 32px;
   padding: 0 0 2px 0;
+  cursor: pointer;
   
 }
 
@@ -166,8 +172,7 @@ header{
   visibility: visible;
   pointer-events: auto;
   transition-delay: 0s; 
-  }       /* ← 進場不延遲 */
-
+  } 
 .dropdown-link > a::after{
   content:"";
   position:absolute;

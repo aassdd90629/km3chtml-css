@@ -339,6 +339,7 @@ section{
 .about-sidebar{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
     padding: 20px;
     background-color: #fff;
@@ -350,7 +351,6 @@ section{
 .dropdown-list{
     padding: 10px 5px;
     font-size: 20px;
-    margin: 0 auto;
 }
 .dropdown-list a{
   display: flex;
@@ -453,6 +453,7 @@ section{
 
 /* 輸入框 */
 .register-from input[type="text"],
+.register-from input[type="tel"],
 .register-from input[type="password"]{
   width:100%;
   height:48px;
@@ -506,8 +507,76 @@ section{
   letter-spacing:.18em;             
 }
 
+.otp-row{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.otp-row input{
+  flex: 1;
+}
+.hint{
+  display: inline-block;
+  color: #666;
+  font-size: 12px;
+  margin: 8px 0 8px 8px;
+}
+#otpHint.error { 
+  color: #d93636; 
+}
+#otpHint.ok    { 
+  color: #2f9e44; 
+}
 
 
+
+.otp-row #sendOtp{
+  height: 44px;                 
+  padding: 0 14px;
+  min-width: 120px;             
+  border: 1px solid #fff;    
+  border-radius: 10px;
+  background: #60C7FA;          
+  color: #fff;                  
+  font-weight: 600;
+  cursor: pointer; /* 變成可以點擊  */
+  transition: background .2s ease, box-shadow .2s ease, transform .05s ease;
+}
+
+.otp-row #sendOtp:hover:not(:disabled){
+  background: #2563eb;         
+  box-shadow: 0 6px 16px rgba(47,63,184,.18);
+}
+
+.otp-row #sendOtp:active:not(:disabled){
+  transform: translateY(1px);
+}
+
+.otp-row #sendOtp:focus-visible{
+  outline: 2px solid rgba(47,63,184,.35);
+  outline-offset: 2px;
+}
+
+/* 看 JS 要不要設 disabled */
+.otp-row #sendOtp:disabled{
+  background: #a8b1ff;
+  border-color: #a8b1ff;
+  color: #fff;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: .9;
+}
+
+/* RWD暫定 */
+@media (max-width: 420px){
+  .otp-row{
+    gap: 6px;
+  }
+  .otp-row #sendOtp{
+    min-width: 108px;
+    padding: 0 10px;
+  }
+}
 
 .to-signin{
   text-align:center;
