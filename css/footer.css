@@ -9,11 +9,12 @@ footer{
                "微軟正黑體", sans-serif;
   color: #111;
   margin-top: 32px;
+  bottom: 0;
   
 }
 .containerfooter{
   width: 1200px;                 
-  height: 300px;
+  height: 268px;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
@@ -150,7 +151,7 @@ footer{
   height: 32px;
   color: #0c0c0c;
   font-weight: 700;
-  padding-top: 4px;
+  padding-top: 12px;
 }
 
 .container-copyright .text p{

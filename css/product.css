@@ -797,3 +797,250 @@ section.checkout-bar-out{
   display: flex;
   justify-content: center;
 }
+
+/* 結帳彈出式視窗 */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 9999; 
+}
+
+.modal-content {
+  background: #FBF5F5;
+  margin: 10% auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+}
+.modal-content > .fix-delivery > h3{
+  font-size: 36px;
+  margin-left: 4px;
+}
+
+.cancel{
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  font-size: 24px;
+}
+
+.fix-delivery{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modal-content > ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-content > ul > li > .invoiceModal-label{
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  padding: 24px;
+  gap: 8px;
+}
+
+.modal-content > ul > li > .deliveryModal-label{
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  padding: 24px;
+}
+
+.modal-content > ul > li > .deliveryModal-label > .deliver-button{
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  gap: 16px;
+}
+.modal-content > ul > li > .deliveryModal-label > .deliver-button > span{
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.modal-content > ul > li > .deliveryModal-label > .deliver-button > small{
+  display: inline-block;
+  color: #666;
+  font-size: 14px;
+}
+
+.round-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #1E90FF;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  position: relative;
+  margin: 0;
+}
+
+.invoiceModal > .modal-content > ul > li > button{
+  display: flex;
+  gap: 8px;
+}
+
+.round-radio:checked::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #1E90FF;
+  border-radius: 50%;
+  display: block;
+}
+
+
+/* 結帳本體內容 */
+.sell-container{
+  width: 1200px;
+  min-height: 400px;         
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 1fr 390px;  
+  gap: 24px;
+}
+
+.sell{
+  display: grid;
+  gap: 24px;
+  font-size: 24px;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.checkout-section-delivery{
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+  padding: 24px 24px 28px;
+  
+}
+
+.checkout-button-delivery{
+  display: flex;
+  width: 100%;
+  font-size: 24px;
+  border: 1px solid #FF5656;
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkout-button-delivery > span{
+  color: #FF5656;
+}
+.checkout-button-delivery > i{
+  font-size: 16px;
+}
+
+
+
+.checkout-section-buyer-info{
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+  padding: 24px 24px 28px;
+}
+
+.checkout-section-buyer-info input[type="email"],
+.checkout-section-buyer-info input[type="tel"]{
+  width:100%;
+  height:48px;
+  border:1px solid #e5e7eb;
+  border-radius: 10px;
+  padding:0 18px;
+  outline:none;
+  background:#fff;
+  color:#111827;
+  box-sizing:border-box;
+  margin-top: 16px;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+.checkout-section-buyer-info input[type="email"]:focus,
+.checkout-section-buyer-info input[type="tel"]:focus
+{
+  border-color:#3b82f6;
+  box-shadow:0 0 0 2px rgba(59,130,246,.14);
+}
+
+.checkout-section-invoice{
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+  padding: 24px 24px 28px;
+}
+
+.checkout-button-invoice{
+  display: flex;
+  width: 100%;
+  font-size: 24px;
+  border: 1px solid #FF5656;
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+.checkout-button-invoice > span{
+  color: #FF5656;
+}
+
+.checkout-button-invoice > i{
+  font-size: 16px;
+}
+.confirm-button{
+  display: flex;
+  justify-content: end;
+}
+.confirm-Delivery{
+  background-color: #FF5656;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 16px;
+  padding: 8px 36px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.confirm-Invoice{
+  background-color: #FF5656;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 16px;
+  padding: 8px 36px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.check-info{
+  margin-top: 16px;
+}

@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="css/product.css">
   
 </head>
-<!-- <style>
+  <style>
   footer{
-    margin-top: 0;
+    margin-top: 0 !important; 
   }
-</style> -->
+  </style>
 <body>
   <!-- header -->
   <header>
@@ -136,7 +136,7 @@
           <span class="subtotal-label">小計</span>
           <span class="subtotal-price">NT$ 5980</span>
         </div>
-        <a class="btn-checkout" href="#"><span>前往結帳</span></a>
+        <a class="btn-checkout" href="sell.html"><span>前往結帳</span></a>
       </div>
     </div>
   </section>
@@ -147,19 +147,7 @@
   <footer> 
   </footer>
 		
-<script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.querySelector('header').innerHTML = data);
-
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.querySelector('footer').innerHTML = data;
-        document.querySelector('footer').style.marginTop = '0';
-      });
-
-</script>		
+<script src="JS/headerfooter.js"></script>
 
 
 </body>

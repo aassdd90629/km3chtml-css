@@ -466,10 +466,12 @@ section{
   box-sizing:border-box;
   transition:border-color .15s ease, box-shadow .15s ease;
 }
+
 .register-from input::placeholder{ 
   color:#9ca3af; 
 }
 .register-from input[type="text"]:focus,
+.register-from input[type="tel"]:focus,
 .register-from input[type="password"]:focus{
   border-color:#3b82f6;
   box-shadow:0 0 0 2px rgba(59,130,246,.14);

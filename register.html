@@ -45,7 +45,6 @@
           <input type="tel"
                  placeholder="09xxxxxxxx"
                  name="phone"
-                 id="phone"
                  pattern="09\d{8}"
                  inputmode="numeric"
                  required>
@@ -53,9 +52,8 @@
           <label for="otp"><b>簡訊驗證碼</b></label>
           <div class="otp-row">
             <input type="text"
-                   placeholder="6 位數字"
+                   placeholder="6位數字"
                    name="otp"
-                   id="otp"
                    maxlength="6"
                    inputmode="numeric"
                    required>
@@ -104,15 +102,7 @@
  
   </footer>
 		
-<script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.querySelector('header').innerHTML = data);
-
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.querySelector('footer').innerHTML = data);
-</script>		
+<script src="JS/headerfooter.js"></script>
 
 
 </body>

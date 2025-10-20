@@ -15,6 +15,11 @@
 
 </head>
 <body>
+  <style>
+  footer{
+    margin-top: 0 !important; 
+  }
+  </style>
   <!-- header -->
   <header>
 
@@ -31,21 +36,178 @@
       </ul>
     </div>
   </section>
+  <section>
+    <div class="sell-container">
+      <!-- 選擇運送方式 -->
+      <div class="sell">
+        <div class="checkout-section-delivery">
+          <div class="checkout-content">
+            <p>選擇運送方式</p>
+            <button id="openDeliveryModal" class="checkout-button-delivery">
+              <span>運送方式</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 訂購人資訊 -->
+        <div class="checkout-section-buyer-info">
+          <div class="checkout-content">
+            <p>訂購人資訊</p>
+            <div class="check-info">
+              <span>E-mail</span>
+              <input type="email" placeholder="請輸入email">
+            </div>
+            <div class="check-info">
+              <span>電話</span>
+              <input type="tel"                  
+                  placeholder="09xxxxxxxx"
+                  name="phone"
+                  pattern="09\d{8}"
+                  inputmode="numeric"
+                  required>
+            </div>
+          </div>
+        </div>
+
+        <!-- 發票資料 -->
+        <div class="checkout-section-invoice">
+          <div class="checkout-content">
+            <p>發票資料</p>
+            <button id="openInvoiceModal" class="checkout-button-invoice">
+              <span>會員載具</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 運送方式彈出視窗 -->
+        <div id="deliveryModal" class="modal">
+          <div class="modal-content">
+            <div class="fix-delivery">
+            <h3>選擇運送方式</h3>
+            <button id="closeDeliveryModal" class="cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul>
+              <li>
+                <label class="deliveryModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  <div class="deliver-button">
+                    <span>超商取貨</span>
+                    <small>7-11取貨付款 (未滿 NT$598 運費 NT$60)</small>
+                  </div>
+                </label>
+              </li>              
+              <li>
+                <label class="deliveryModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  <div class="deliver-button">
+                  <span>宅配到府</span>
+                  <small>宅配 (未滿 NT$800 運費 NT$60)</small>
+                  </div>
+                </label>
+                
+              </li>
+
+              <li>
+                <label class="deliveryModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  <div class="deliver-button">
+                  <span>郵寄</span>
+                  <small>本島互寄費用為$60元</small>
+                  </div>              
+                </label>
+              </li>
+            </ul>
+            <div class="confirm-button">
+            <button id="confirmDeliveryModal" class="confirm-Delivery">新增地址</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🧾 發票資料彈出視窗 -->
+        <div id="invoiceModal" class="modal">
+          <div class="modal-content">
+            <div class="fix-delivery">
+            <h3>發票資料</h3>
+            <button id="closeInvoiceModal" class="cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul>
+              <li>
+                <label class="invoiceModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  會員載具
+                </label>
+              </li>
+              <li>
+                <label class="invoiceModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  手機條碼
+                </label>
+              </li>
+              <li>
+                <label class="invoiceModal-label">
+                <input type="radio" name="invoice-radio" class="round-radio">
+                公司統編
+                </label>
+              </li>
+              <li>
+                <label class="invoiceModal-label">
+                  <input type="radio" name="invoice-radio" class="round-radio">
+                  捐贈發票
+                </label>
+              </li>
+            </ul>
+            <div class="confirm-button">
+            <button id="confirmInvoiceModal" class="confirm-Invoice">確認</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cart-summary">
+        <h3>小計明細</h3>
+        <hr>
+        <div class="summary-row">
+          <span>一般會員</span>
+        </div>
+        <div class="summary-row">
+          <span>商品金額</span>
+          <span>NT$ 5980</span>
+        </div>
+        <hr>
+        <div class="summary-row total">
+          <span>小計</span>
+          <span>NT$ 5980</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="checkout-bar-out">
+    <div class="checkout-bar">
+      <div class="checkout-inner">
+        <div class="subtotal">
+          <span class="subtotal-label">總共</span>
+          <span class="subtotal-price">NT$ 5980</span>
+        </div>
+        <a class="btn-checkout" href="#"><span>訂購</span></a>
+      </div>
+    </div>
+  </section>
+
 
   <footer>
-
   </footer>
 		
-<script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.querySelector('header').innerHTML = data);
 
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.querySelector('footer').innerHTML = data);
-</script>		
 
 
 </body>
+
+<script src="JS/headerfooter.js"></script>
+<script src="JS/sell.js"></script>
+
 </html>
