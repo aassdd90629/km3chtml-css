@@ -44,6 +44,7 @@
           <label for="phone"><b>手機號碼</b></label>
           <input type="tel"
                  placeholder="09xxxxxxxx"
+                 id="phone"
                  name="phone"
                  pattern="09\d{8}"
                  inputmode="numeric"
@@ -53,6 +54,7 @@
           <div class="otp-row">
             <input type="text"
                    placeholder="6位數字"
+                   id="otp"
                    name="otp"
                    maxlength="6"
                    inputmode="numeric"
@@ -61,10 +63,12 @@
           </div>
           <small id="otpHint" class="hint">點擊「發送驗證碼」將寄送到你的手機</small>
           <hr>
+          
+          <label for="register-psw"><b>密 碼</b></label>
+          <input type="password" placeholder="請輸入密碼" name="register-psw" id="register-psw" required>
+
           <hr>
-          <label for="psw"><b>密 碼</b></label>
-          <input type="password" placeholder="請輸入密碼" name="psw" id="psw" required>
-          <hr>
+
           <label for="psw-repeat"><b>確認密碼</b></label>
           <input type="password" placeholder="請再次輸入密碼" name="psw-repeat" id="psw-repeat" required>
           <br>
@@ -78,15 +82,15 @@
             </label>
           </div>
           <div class="terms">
-            <input type="checkbox" name="" id="">
-            <label for="terms">是否訂閱本網站的電子報</label>
+            <input type="checkbox" name="terms" id="terms-check">
+            <label for="terms-check">是否訂閱本網站的電子報</label>
           </div>
 
-          <button type="submit" class="btn-b registerbtn">確 認</button>
+          <button type="submit" class="btn-b registerbtn" style="cursor: pointer;">確 認</button>
 
           <div class="to-signin">
             <p>已經有帳號了?
-              <a class="blue3d" href="#" style="width:auto;">Sign in</a>.
+              <a class="blue3d" id="openLoginModal" style="width:auto; cursor: pointer;">Sign in</a>.
             </p>
           </div>
         </div>

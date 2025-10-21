@@ -1,3 +1,5 @@
+
+  
   <!-- header -->
     <div class="containerheader">
       <div class="logo-container">
@@ -44,7 +46,51 @@
             </a>
           </li>
           <!-- 再用js寫出彈出式視窗跟會員專區 -->
-          <li class="memberlogin"><button onclick="window.location.href='register.html'" class="person"><i class="fa-solid fa-user"></i></button></li>
+          <li class="memberlogin"><button id="openLoginModal" class="person"><i class="fa-solid fa-user"></i></button></li>
         </ul> 
       </div>
+
     </div>
+
+    <div id="LoginModal" class="Login-Modal">
+      <div class="Login-Modal-content">
+        <div class="Login-h3">
+          <span>登入會員</span>
+          <button id="closeLoginModal" class="cancel"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="Login-input">
+          <div class="Login-info">
+            <label for="Login-email"><b>Email</b></label>
+            <input type="email"
+                   placeholder="Enter Email" 
+                   name="email" 
+                   id="Login-email" 
+                   required>
+          </div>
+          <div class="Login-info">
+          <label for="Login-psw"><b>密 碼</b></label>
+          <input type="password" 
+                 placeholder="請輸入密碼" 
+                 name="Login-psw" 
+                 id="Login-psw" 
+                 required>
+          </div>        
+        </div>
+          <div class="Login-terms">
+            <input type="checkbox" name="Login-terms" id="Login-terms">
+            <label for="Login-terms">是否記入登入資訊</label>
+          </div>
+          <div class="Login-button">
+            <button id="confirmLoginModal" type="submit" class="btn-b registerbtn">確 認</button>
+          </div>
+          <div class="to-signin">
+            <p>還沒有帳號?
+              <a class="blue3d" href="register.html" style="width:auto;">註冊</a>.
+            </p>
+          </div>
+      </div>
+    </div>
+
+ 
+
+

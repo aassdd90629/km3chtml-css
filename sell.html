@@ -55,16 +55,17 @@
           <div class="checkout-content">
             <p>訂購人資訊</p>
             <div class="check-info">
-              <span>E-mail</span>
-              <input type="email" placeholder="請輸入email">
+              <label for="check-Email"><span>E-mail</span></label>
+              <input type="email" placeholder="請輸入email" id="check-Email">
             </div>
             <div class="check-info">
-              <span>電話</span>
+              <label for="check-tel"><span>電話</span></label>
               <input type="tel"                  
                   placeholder="09xxxxxxxx"
                   name="phone"
                   pattern="09\d{8}"
                   inputmode="numeric"
+                  id="check-tel"
                   required>
             </div>
           </div>

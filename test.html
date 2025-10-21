@@ -2,150 +2,130 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/product.css">
 <title>下拉選單示範</title>
-<style>
-/* 導覽列容器 */
-.nav {
-  margin-left: 120px;
-  width: 496px;
-  height: 56px;
-  margin-top: 8px;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
 
-/* 每個按鈕 */
-.nav-btn {
-  position: relative;
-}
-
-/* 主連結樣式 */
-.nav-btn > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 124px;
-  height: 40px;
-  padding: 4px 10px;
-  text-decoration: none; 
-  color: #2f3fb8;
-  font-weight: bold;
-  position: relative;
-}
-
-/* 底線動畫 */
-.nav-btn > a::after {
-  content:"";
-  position:absolute;
-  left:50%; 
-  bottom:-2px; 
-  width:0; 
-  height:2px;
-  background: currentColor;
-  transition: width .25s ease, left .25s ease;
-}
-.nav-btn > a:hover::after,
-.nav-btn.active > a::after {
-  left:0; 
-  width:100%;
-}
-
-/* 下拉選單 */
-.dropdown {
-  position: absolute;
-  top: 115%;    
-  left: 0;
-  z-index: 10;
-}
-
-.dropdown > ol {
-  display: none;
-  position: absolute;
-  left: 0;
-  width: 96px;
-  list-style: none;
-  margin: 0;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #cfcfcf;
-}
-
-.dropdown > ol > li > a {
-  display: block;
-  text-align: center;
-  padding: 10px 14px; 
-  color:#2f3fb8;
-  text-decoration: none;
-  position: relative;
-}
-
-.dropdown > ol > li > a::after {
-  content:"";
-  position:absolute;
-  bottom: 4px;
-  background: currentColor;
-  transition: width .25s ease, left .25s ease;
-}
-
-.nav-btn.active > .dropdown > ol {
-  display: block;
-}
-</style>
 </head>
 <body>
 
-<div class="nav">
-  <div class="nav-btn">
-    <a href="promo.html">優惠活動</a>
-  </div>
+  <!-- header -->
+    <div class="containerheader">
+      <div class="logo-container">
+        <div class="nav-logo">
+          <a href="index.html"><img alt="logo" width="100" height="60" src="img/header/log_2.png"></a>
+        </div>
+      </div>
 
-  <div class="nav-btn">
-    <a href="#">尋找商品</a>
-    <div class="dropdown">
-      <ol>
-        <li><a href="product-list.html">電競鍵盤</a></li>
-        <li><a href="product-list.html">電競滑鼠</a></li>
-        <li><a href="product-list.html">無線耳機</a></li>
-        <li><a href="product-list.html">其他周邊</a></li>
-      </ol>
+      <div class="nav">
+        <div class="nav-btn">
+              <a href="promo.html">優惠活動</a>
+        </div>
+        <div class="nav-btn">
+              <a href="product-list.html">尋找商品<i class="fa-solid fa-sort-down"></i></a>
+                <div class="dropdown">
+                  <div class="dropdown-link">
+                    <a href="product-list.html">電競鍵盤</a>
+                  </div>
+                  <div class="dropdown-link">
+                      <a href="product-list.html">電競滑鼠</a>
+                  </div>
+                  <div class="dropdown-link">
+                      <a href="product-list.html">無線耳機</a>
+                  </div>
+                  <div class="dropdown-link">
+                      <a href="product-list.html">其他周邊</a>
+                  </div>
+                </div>              
+        </div>
+        <div class="nav-btn">
+              <a href="about.html">關於我們</a>
+        </div>
+        <div class="nav-btn">
+              <a href="register.html">會員專區</a>
+        </div>
+      </div>
+      
+      <div class="login">
+        <ul>
+          <li class="search"></i><input type="search" placeholder="找到您的商品"><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li class="cart">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <!-- 再用js寫出彈出式視窗跟會員專區 -->
+          <li class="memberlogin"><button id="openLoginModal" class="person"><i class="fa-solid fa-user"></i></button></li>
+        </ul> 
+      </div>
     </div>
-  </div>
 
-  <div class="nav-btn">
-    <a href="about.html">關於我們</a>
-  </div>
+    <div id="LoginModal" class="Login-Modal">
+      <div class="Login-Modal-content">
+        <div class="Login-h3">
+          <span>登入會員</span>
+          <button id="closeLoginModal" class="cancel"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="Login-input">
+          <div class="Login-info">
+            <label for="email"><b>Email</b></label>
+            <input type="text"
+                   placeholder="Enter Email" 
+                   name="email" 
+                   id="email" 
+                   required>
+          </div>
+          <div class="Login-info">
+          <label for="psw"><b>密 碼</b></label>
+          <input type="password" 
+                 placeholder="請輸入密碼" 
+                 name="psw" 
+                 id="psw" 
+                 required>
+          </div>        
+        </div>
+          <div class="terms">
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">是否記入登入資訊</label>
+          </div>
+          <div class="Login-button">
+            <button id="confrimLoginModal" type="submit" class="btn-b registerbtn">確 認</button>
+          </div>
+          <div class="to-signin">
+            <p>還沒有帳號?
+              <a class="blue3d" href="register.html" style="width:auto;">註冊</a>.
+            </p>
+          </div>
+      </div>
+    </div>
 
-  <div class="nav-btn">
-    <a href="register.html">會員專區</a>
-  </div>
-</div>
 
 <script>
-// 點擊控制下拉選單
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.preventDefault(); // 阻止 a 連結跳轉
-    e.stopPropagation();
+      const LoginModal = document.querySelector("#LoginModal");
+      const openLoginModal = document.querySelector("#openLoginModal");
+      const closeLoginModal = document.querySelector("#closeLoginModal");
+      const confrimLoginModal = document.querySelector("#confrimLoginModal");
 
-    // 關掉其他展開選單
-    document.querySelectorAll('.nav-btn.active').forEach(activeBtn => {
-      if (activeBtn !== btn) activeBtn.classList.remove('active');
-    });
+      openLoginModal.addEventListener("click", () => {
+        LoginModal.style.display = "block";
+      });
 
-    // 切換當前選單
-    btn.classList.toggle('active');
-  });
-});
+      closeLoginModal.addEventListener("click", () => {
+        LoginModal.style.display = "none";
+      });
 
-// 點空白處關閉下拉選單
-document.addEventListener('click', () => {
-  document.querySelectorAll('.nav-btn.active').forEach(btn => {
-    btn.classList.remove('active');
-  });
-});
+      confrimLoginModal.addEventListener("click", () => {
+        LoginModal.style.display = "none";
+      });
+
+      LoginModal.addEventListener("click", ( e ) => {
+          if(e.target == LoginModal){
+          LoginModal.style.display = "none";
+          }
+      });
 </script>
 
 </body>

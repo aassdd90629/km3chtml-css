@@ -15,13 +15,13 @@
 
       confirmDelivery.addEventListener("click", () => {
         deliveryModal.style.display = "none";
-      })
+      });
 
       deliveryModal.addEventListener("click", (e) => {
         if(e.target == deliveryModal){
           deliveryModal.style.display = "none";
         }
-      })
+      });
 
       // 發票
       const invoiceModal = document.querySelector("#invoiceModal");
@@ -39,10 +39,33 @@
 
       confirmInvoice.addEventListener("click", () => {
         invoiceModal.style.display = "none";
-      })
+      });
 
       invoiceModal.addEventListener("click", (e) => {
           if(e.target == invoiceModal){
             invoiceModal.style.display = "none";
           }
-      })
+      });
+
+      // const LoginModal = document.querySelector("#LoginModal");
+      // const openLoginModal = document.querySelector("#openLoginModal");
+      // const closeLoginModal = document.querySelector("#closeLoginModal");
+      // const confrimLoginModal = document.querySelector("#confrimLoginModal");
+
+      // openLoginModal.addEventListener("click", () => {
+      //   LoginModal.style.display = "block";
+      // });
+
+      // closeLoginModal.addEventListener("click", () => {
+      //   LoginModal.style.display = "none";
+      // });
+
+      // confrimLoginModal.addEventListener("click", () => {
+      //   LoginModal.style.display = "none";
+      // });
+
+      // LoginModal.addEventListener("click", ( e ) => {
+      //     if(e.target == LoginModal){
+      //     LoginModal.style.display = "none";
+      //     }
+      // });

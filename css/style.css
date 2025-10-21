@@ -433,6 +433,8 @@ section{
   color:#2b3645;
   letter-spacing:.02em;
 }
+
+
 .register-from > p{
   margin-bottom:28px;
   text-align:center;
@@ -442,7 +444,7 @@ section{
 
 .register-from label{
   display:block;
-  margin: 12px 0 12px;
+  margin: 12px 0 12px 12px;
   font-weight:600;
   font-size:14px;
   color:#2b3645;
@@ -607,3 +609,4 @@ section{
   .register-from{ padding:28px 20px; }
   .register-from .registerbtn{ letter-spacing:.12em; }
 }
+

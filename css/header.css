@@ -290,3 +290,94 @@ header{
   filter: brightness(1.1);
 }
 
+.Login-Modal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 9999; 
+
+}
+
+.Login-Modal-content{
+  background: #FBF5F5;
+  margin: 10% auto;
+  padding: 20px 20px 0 20px;
+  width: 560px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr;
+}
+
+.Login-h3{
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.Login-h3 > .cancel{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Login-input{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Login-input > .Login-info > input[type="email"],
+.Login-input > .Login-info > input[type="password"]{
+  width:100%;
+  height:48px;
+  border:1px solid #e5e7eb;
+  border-radius:9999px;
+  padding:0 18px;
+  outline:none;
+  background:#fff;
+  color:#111827;
+  box-sizing:border-box;
+  transition:border-color .15s ease, box-shadow .15s ease;
+
+}
+
+.Login-input > .Login-info > input::placeholder{ 
+  color:#9ca3af; 
+}
+.Login-input > .Login-info > input[type="email"]:focus,
+.Login-input > .Login-info > input[type="password"]:focus{
+  border-color:#3b82f6;
+  box-shadow:0 0 0 2px rgba(59,130,246,.14);
+}
+
+.Login-input > .Login-info > label{
+  display:block;
+  margin: 12px 0 12px 12px;
+  font-weight:600;
+  font-size:14px;
+  color:#2b3645;
+}
+
+.Login-input > .Login-info > b{ 
+  font-weight:600; 
+}
+
+.Login-terms{
+  font-size: 16px;
+  align-items: center;
+  margin: 36px 0 0 12px;
+  height: 20px;
+}
+
+.Login-button > button{
+  width:100%;
+  height:52px;
+  border:0;
+  border-radius:999px;
+  background:linear-gradient(180deg,#60C7FA);
+  color:#fff;
+  font-size:16px;
+  letter-spacing:.18em;   
+}
