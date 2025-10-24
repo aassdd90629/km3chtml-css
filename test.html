@@ -101,31 +101,35 @@
           </div>
       </div>
     </div>
-
+<section>
+          <div id="drownlistone">電競鍵盤<i class="fa-solid fa-angle-down"></i>
+            <ul id="listone">
+              <li>電競鍵盤</li>
+              <li>電競鍵盤</li>
+              <li>電競鍵盤</li>
+            </ul>
+          </div>
+</section>
 
 <script>
-      const LoginModal = document.querySelector("#LoginModal");
-      const openLoginModal = document.querySelector("#openLoginModal");
-      const closeLoginModal = document.querySelector("#closeLoginModal");
-      const confrimLoginModal = document.querySelector("#confrimLoginModal");
+      const opendrown = document.querySelector("#drownlistone");
+      const uldrownlist = document.querySelector("#listone");
 
-      openLoginModal.addEventListener("click", () => {
-        LoginModal.style.display = "block";
+      opendrown.addEventListener('click', (e) => {
+        if (uldrownlist.style.display === "block") {
+          uldrownlist.style.display = "none";
+        } else {
+          uldrownlist.style.display = "block";
+        }
       });
 
-      closeLoginModal.addEventListener("click", () => {
-        LoginModal.style.display = "none";
-      });
+      // 點擊外部時自動關閉
+      // document.addEventListener('click', () => {
+      //   uldrownlist.style.display = "none";
+      // });
+</script>
+<script src="JS/sell.js">
 
-      confrimLoginModal.addEventListener("click", () => {
-        LoginModal.style.display = "none";
-      });
-
-      LoginModal.addEventListener("click", ( e ) => {
-          if(e.target == LoginModal){
-          LoginModal.style.display = "none";
-          }
-      });
 </script>
 
 </body>

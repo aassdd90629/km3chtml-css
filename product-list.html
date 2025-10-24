@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/product.css">
   <!-- !JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 
 </head>
 
@@ -57,25 +58,25 @@
     <div class="contain-product">
       <div class="fliterin">
         <div class="filter-in-left">
-          <div class="drown-list">電競鍵盤<i class="fa-solid fa-angle-down"></i>
-            <ul >
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
+          <div class="drown-list" id="drownlistone"><button class="fixlistone">電競鍵盤<i class="fa-solid fa-angle-down"></i></button>
+            <ul class="listone" id="listone">
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
             </ul>
           </div>
-          <div class="drown-list">無線鍵盤<i class="fa-solid fa-angle-down"></i>
-            <ul>
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
+          <div class="drown-list" id="drownlisttwo"><button class="fixlistone">電競滑鼠<i class="fa-solid fa-angle-down"></i></button>
+            <ul class="listone" id="listtwo">
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
             </ul>
           </div>
-          <div class="drown-list">其他週邊<i class="fa-solid fa-angle-down"></i>
-            <ul>
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
-              <li>電競鍵盤</li>
+          <div class="drown-list" id="drownlistthree"><button class="fixlistone">其他週邊<i class="fa-solid fa-angle-down"></i></button>
+            <ul class="listone" id="listthree">
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
+              <li><button>電競鍵盤</button></li>
             </ul>
           </div>
         </div>
@@ -85,7 +86,6 @@
             <option value="">熱門商品</option>
             <option value="">週邊配件</option>
             <option value="">其他商品</option>
-            <i class="fa-solid fa-angle-down"></i>
           </select>
         </div>
       </div>
@@ -97,6 +97,7 @@
                 <div class="product-card-text">
                   <div class="product-card-text-h3">
                   <h3>ASUS TUF Gaming M3 Gen II 電競滑鼠</h3>
+            </a>
                   </div>
                   <div class="card-bottom">
                       <div class="price">$1900</div>
@@ -108,7 +109,7 @@
                       </div>
                   </div>
                 </div>
-            </a>
+            
           </div>
           <div class="product-card">
             <a href="product-detail.html">
@@ -272,14 +273,16 @@
   <section>
         <div class="pagination-g">
           <div class="pagination">
-            <a href="#">&laquo;</a>
+            <a href="#"><i class="fa-solid fa-angles-left"></i></a>
+            <a href="#"><i class="fa-solid fa-angle-left"></i></a>
             <a href="#">1</a>
             <a href="#" class="active">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
             <a href="#">6</a>
-            <a href="#">&raquo;</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+            <a href="#"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
   </section>
@@ -288,6 +291,8 @@
   </footer>
 
 <script src="JS/headerfooter.js"></script>
+<script src="JS/productlist.js"></script>
+
 
 
 </body>

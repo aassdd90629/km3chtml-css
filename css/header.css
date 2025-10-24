@@ -123,7 +123,6 @@ header{
 
 
 
-/* 改這段：用透明＋位移控制進出場 */
 .dropdown{
   position: absolute;             
   list-style: none;

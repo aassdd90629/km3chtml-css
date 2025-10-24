@@ -70,33 +70,64 @@
 
 /* 分類清單  */
 .drown-list{
-  position: relative;
   display: block;
-  padding: 10px 8px;
-  line-height: 1.35;
-  font-size: 20px;              
-  font-weight: 500;             
   border-radius: 10px;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
-.drown-list > ul{
+/* .drown-list > ul{
   display: none;
   padding: 10px 8px;
   line-height: 1.35;
   font-size: 20px;             
   border-radius: 10px;
+} */
+
+.drown-list > .listone{
+  display: none;
+  padding: 8px 8px 4px 8px;
+  padding-left: 16px;
+  line-height: 1.5;
+  font-size: 16px;             
+  border-radius: 10px;
 }
+.fixlistone{
+  display: flex;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  line-height: 1.35;
+  font-size: 20px;              
+  font-weight: 500;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 0 4px 4px ;
+}
+.fixlistone:hover,
+.listone > li > button:hover{
+  background-color: #60C7FA;
+}
+.listone > li{
+  padding-bottom: 8px;
+}
+.listone > li > button{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 
 .drown-list i{
   margin-left: 12px;
   font-size: 14px;
   padding-bottom: 4px;
-
-}
-
-.drown-list:hover{
-  background: #60C7FA;
 }
 
 /*  下面篩選 */
@@ -170,19 +201,20 @@
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow: hidden;
+  position: relative;
+  transition: all .3s ease;
   
 }
 
 .product-card a{
   text-decoration: none;
   color: #000;
-  position: relative;
-  
 }
 
 .product-card img {
   width: 100%;
   display: block;
+  
 }
 .product-card-text{
   position: absolute;
@@ -200,6 +232,7 @@
   justify-content: flex-start;
   font-size: 20px;
   line-height: 1.5;
+  transition: color .3s ease, transform .3s ease;
 }
 
 .product-card-text-h3{
@@ -222,8 +255,20 @@
 
 }
 
+.product-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.product-card-text:hover h3 {
+  color: #007bff;
+  transform: scale(1.02);
+}
+
 .price {
-  font-size: 16px;
+  align-items: center;
+  font-size: 20px;
   font-weight: bold;
   color: #e60000;
 }
@@ -234,7 +279,7 @@
 }
 .icon-fav i, 
 .icon-cart i {
-  font-size: 16px;
+  font-size: 24px;
   color: #666;
   transition: transform .22s cubic-bezier(.2,.8,.2,1.2);
 }
@@ -328,6 +373,7 @@
   border-radius: 16px;
   border: 2px solid #eaeaea;
   background: #fff;
+  opacity: 0.5;
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 

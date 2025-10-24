@@ -69,3 +69,6 @@
       //     LoginModal.style.display = "none";
       //     }
       // });
+
+
+      // 點擊外部時自動關閉

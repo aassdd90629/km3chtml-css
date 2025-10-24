@@ -9,7 +9,6 @@
       .then(data => {
         document.querySelector('header').innerHTML = data;
 
-        // ⚡ 把登入視窗從 header 移到 body
         const loginModal = document.querySelector('#LoginModal');
         if (loginModal) {
           document.body.appendChild(loginModal);
