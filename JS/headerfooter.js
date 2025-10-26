@@ -45,3 +45,23 @@
         LoginModal.style.display = 'none';
       }
     });  
+
+    document.addEventListener('click', ( e ) => {
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+
+      if (e.target.closest('.barmenu')){
+        nav.classList.toggle('open');
+      }
+    });
+
+      document.addEventListener('click', ( e ) => {
+        const dropdownlist = document.querySelector('.dropdown');
+        if (!dropdownlist) return;
+
+        if (e.target.closest('.nav-btn:nth-child(2) > a')){
+          e.preventDefault();
+          dropdownlist.classList.toggle('dropopen');
+        }
+      });
+
