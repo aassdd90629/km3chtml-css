@@ -28,9 +28,14 @@
       if (!LoginModal) return;
 
 
-      if (e.target.closest('#openLoginModal')) {
+      if (e.target.closest('#openLoginModal')){
         LoginModal.style.display = 'flex';
       }
+
+      if (e.target.closest('#openLoginModalRWD')){
+        LoginModal.style.display = 'flex';
+      }
+
 
       if (e.target.closest('#closeLoginModal, #confirmLoginModal')) {
         closeModal();
@@ -44,7 +49,32 @@
       function closeModal() {
         LoginModal.style.display = 'none';
       }
-    });  
+    });
+    // RWD登入
+    // document.addEventListener('click', ( e ) =>{
+    //   const LoginModalRWD = document.querySelector('#openLoginModalRWD');
+    //   if (!LoginModalRWD) return;
+
+    //   if (e.target.closest('#openLoginModal')){
+    //     LoginModalRWD.style.display = 'flex';
+    //   }
+
+    //   if (e.target.closest('#closeLoginModal, #confirmLoginModal')) {
+    //     closeModal();
+    //   }
+
+    //   // 點外面關閉
+    //   if (e.target === LoginModal) {
+    //     closeModal();
+    //   }
+
+    //   function closeModal() {
+    //     LoginModal.style.display = 'none';
+    //   }
+
+
+
+    // });
 
     document.addEventListener('click', ( e ) => {
       const nav = document.querySelector('.nav');
@@ -55,7 +85,7 @@
       }
     });
 
-      document.addEventListener('click', ( e ) => {
+    document.addEventListener('click', ( e ) => {
         const dropdownlist = document.querySelector('.dropdown');
         if (!dropdownlist) return;
 
@@ -63,5 +93,5 @@
           e.preventDefault();
           dropdownlist.classList.toggle('dropopen');
         }
-      });
+    });
 

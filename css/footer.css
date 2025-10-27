@@ -19,7 +19,7 @@ footer{
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
-  gap: 116px;        
+  gap: 96px;        
 }
 
 
@@ -27,6 +27,11 @@ footer{
     width: 288px;
     height: 185px;
     /* flex: 0 0 520px;  */
+}
+.info-text-group{
+  display: flex;
+  gap: 116px;        
+
 }
 .info-text{
     padding-top: 48px;
@@ -121,7 +126,7 @@ footer{
     padding-top: 48px;
     width: 184px;                    
     height: 206px;
-    margin-left: 12px; 
+    margin: 0 auto; 
 }
 .line img{
     width: 184px;                    
