@@ -4,6 +4,8 @@
       const openDelivery = document.querySelector("#openDeliveryModal");
       const closeDelivery = document.querySelector("#closeDeliveryModal");
       const confirmDelivery = document.querySelector("#confirmDeliveryModal");
+      
+
 
       openDelivery.addEventListener("click", () => {
         deliveryModal.style.display = "block";
@@ -28,6 +30,7 @@
       const openInvoice = document.querySelector("#openInvoiceModal");
       const closeInvoice = document.querySelector("#closeInvoiceModal");
       const confirmInvoice = document.querySelector("#confirmInvoiceModal");
+      
 
       openInvoice.addEventListener("click", () => {
         invoiceModal.style.display = "block";

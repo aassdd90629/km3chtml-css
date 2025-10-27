@@ -160,9 +160,7 @@ header{
   
 }
 
-.nav-btn:hover .dropdown,
-.nav-btn:focus-within .dropdown,
-.nav-btn .dropdown:hover{
+.nav-btn:hover .dropdown{
   display: block;
   transform: translateY(0);
   pointer-events: auto;

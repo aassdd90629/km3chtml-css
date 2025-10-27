@@ -24,8 +24,6 @@ footer{
 
 
 .footer-container{
-    width: 288px;
-    height: 185px;
     /* flex: 0 0 520px;  */
 }
 .info-text-group{
@@ -53,7 +51,7 @@ footer{
 .info-logo ul{
   display: flex;
   align-items: center;
-    padding-left: 0px;
+  padding-left: 0px;
 
 
 }
@@ -66,8 +64,7 @@ footer{
 
 /* icon.文字*/
 .info{
-    width: 285px;
-    height: 165px;
+    width: 300px;
     padding-top: 26px;
 }
 .address, .tel, .email, .web{

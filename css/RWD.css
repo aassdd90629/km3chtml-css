@@ -105,7 +105,7 @@
 
     .footer-container{
         height: 100%;
-        padding-top: 12px;
+        padding-top: 72px;
     }
     .info-logo{
         padding: 0;
@@ -148,11 +148,12 @@
         margin-right: auto;
     }
 
-    .dropdown{
+    .nav-btn:nth-child(2) > .dropdown{
         display: none;
         background-color: transparent;
         outline: 0;
         padding-left: 16px;
+        transform: translateY(0);
     }
 
     .nav-btn:nth-child(2) > a{
@@ -160,18 +161,17 @@
     }
 
 
-    .nav-btn:hover .dropdown,
+    /* .nav-btn:hover .dropdown,
     .nav-btn:focus-within .dropdown,
     .nav-btn .dropdown:hover {
-        display: block;
         transform: translateY(0);
         pointer-events: none;
         transition: none;
-    }
+    } */
 
 
 
-    .dropopen{
+    .nav-btn:nth-child(2) > .dropdown.dropopen{
         display: block;
         position: static;
     }
