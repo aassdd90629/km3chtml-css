@@ -239,7 +239,8 @@
     .contain-product{
         max-width: calc(100% - 24px);
         height: auto;
-        padding: 0 12px 0 12px;        
+        padding: 0 12px 0 12px;
+        flex-direction: column;       
     }
 
     .product-list-promo{
@@ -249,51 +250,93 @@
         grid-template-columns: auto auto;
         column-gap: 48px;
     }
-
+    .filterin{
+        max-width: calc(100% - 24px);
+        margin: 0;
+    }
     .product-list{
-        column-gap: 16px;
+        column-gap: 60px;
         padding-left: 0;
-        row-gap: 32px;
-        grid-template-columns: auto auto;
-        margin-bottom: 32px;
+        row-gap: 24px;
+        grid-template-columns: 1fr  1fr;
+        margin: 0 auto;
     }
     
     .pagination-g{
-        display: none;
+        width: calc(100% - 24px);
+        margin: 0 auto;
+        margin-top: 32px;
+        padding: 0;
     }
 
     .product-card:first-child{
         display: none;
     }
 
+    .product-card{
+        max-width: 100%;
+    }
+
+    .filter-in-left{
+        width: 100%;
+    }
+
+/*  about RWD   */
+
+    .forallbanner {
+        width: calc(100% - 24px);
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+
+    .about{
+        flex-direction: column;
+        width: calc(100% - 24px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .sidebar{
+        width: 100%;
+    }   
+
+    .about-content-out{
+        width: 100%;
+    }
+/* cart RWD */
+    .cart-container{
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;  
+        grid-template-rows: 0.5fr 1fr;
+    }
+
+    .cart-items{
+        order: 1;
+
+    }
+    .cart-summary{
+        order: 0;
+    }
+
+    .checkout-bar{
+        margin: 0 auto;
+        width: calc(100% - 24px);
+    }
+
+    .subtotal-price{
+        font-size: 36px;     
+    }
 
 
+    .sell-container{
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr; 
+    }
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 820px){
+    
 }

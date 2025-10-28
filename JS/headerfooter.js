@@ -1,9 +1,3 @@
-    // fetch('Login.html')
-    //   .then(res => res.text())
-    //   .then(data => {
-    //     document.querySelector('person').innerHTML = data;
-    //   });
-
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
@@ -50,31 +44,8 @@
         LoginModal.style.display = 'none';
       }
     });
-    // RWD登入
-    // document.addEventListener('click', ( e ) =>{
-    //   const LoginModalRWD = document.querySelector('#openLoginModalRWD');
-    //   if (!LoginModalRWD) return;
-
-    //   if (e.target.closest('#openLoginModal')){
-    //     LoginModalRWD.style.display = 'flex';
-    //   }
-
-    //   if (e.target.closest('#closeLoginModal, #confirmLoginModal')) {
-    //     closeModal();
-    //   }
-
-    //   // 點外面關閉
-    //   if (e.target === LoginModal) {
-    //     closeModal();
-    //   }
-
-    //   function closeModal() {
-    //     LoginModal.style.display = 'none';
-    //   }
 
 
-
-    // });
 
     document.addEventListener('click', ( e ) => {
       const nav = document.querySelector('.nav');

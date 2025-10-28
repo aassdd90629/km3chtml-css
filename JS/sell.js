@@ -1,4 +1,3 @@
-      // 測試 
       // 運送方式
       const deliveryModal = document.querySelector("#deliveryModal");
       const openDelivery = document.querySelector("#openDeliveryModal");
@@ -50,28 +49,3 @@
           }
       });
 
-      // const LoginModal = document.querySelector("#LoginModal");
-      // const openLoginModal = document.querySelector("#openLoginModal");
-      // const closeLoginModal = document.querySelector("#closeLoginModal");
-      // const confrimLoginModal = document.querySelector("#confrimLoginModal");
-
-      // openLoginModal.addEventListener("click", () => {
-      //   LoginModal.style.display = "block";
-      // });
-
-      // closeLoginModal.addEventListener("click", () => {
-      //   LoginModal.style.display = "none";
-      // });
-
-      // confrimLoginModal.addEventListener("click", () => {
-      //   LoginModal.style.display = "none";
-      // });
-
-      // LoginModal.addEventListener("click", ( e ) => {
-      //     if(e.target == LoginModal){
-      //     LoginModal.style.display = "none";
-      //     }
-      // });
-
-
-      // 點擊外部時自動關閉
