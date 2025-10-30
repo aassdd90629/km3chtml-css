@@ -327,6 +327,12 @@
     text-decoration: none;
 }
 
+.pagination a:hover{
+  border: 0;
+  border-radius: 999px;
+  background-color: #666;
+}
+
 /* product-detail */
 
 /* 上方 */
@@ -1158,6 +1164,9 @@ section.checkout-bar-out{
   margin-top: 16px;
 }
 
+#confirmDeliveryModaltwo{
+  display: none;
+}
 /* 購物車新版 */
 
 .empty-cart{
@@ -1203,7 +1212,7 @@ section.checkout-bar-out{
   transform: translateY(-20px);
   transition: all 0.3s ease;
 }
-.show{
+.cart-notification.show{
     position: fixed;
     z-index: 9999;
     top: 20px;
@@ -1211,4 +1220,6 @@ section.checkout-bar-out{
     opacity: 1;
     transform: translateY(0);
 }
+
+
 

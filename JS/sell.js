@@ -1,56 +1,81 @@
       // 運送方式
-      const deliveryModal = document.querySelector("#deliveryModal");
-      const openDelivery = document.querySelector("#openDeliveryModal");
-      const closeDelivery = document.querySelector("#closeDeliveryModal");
-      const confirmDelivery = document.querySelector("#confirmDeliveryModal");
-      
+    function deliveryModal(){
+          const deliveryModal = document.querySelector("#deliveryModal");
+          const openDelivery = document.querySelector("#openDeliveryModal");
+          const closeDelivery = document.querySelector("#closeDeliveryModal");
+          const confirmDelivery = document.querySelector("#confirmDeliveryModal");
+          const confirmDeliveryModaltwo = document.querySelector('#confirmDeliveryModaltwo');
+          const storebotton = document.querySelector("#store");
+          const homebotton = document.querySelector("#home");
+          const hometwobotton = document.querySelector("#hometwo");
 
 
-      openDelivery.addEventListener("click", () => {
-        deliveryModal.style.display = "block";
-      });
 
-      closeDelivery.addEventListener("click", () => {
-        deliveryModal.style.display = "none";
-      });
+          openDelivery.addEventListener("click", () => {
+            deliveryModal.style.display = "block";
+          });
 
-      confirmDelivery.addEventListener("click", () => {
-        deliveryModal.style.display = "none";
-      });
+          closeDelivery.addEventListener("click", () => {
+            deliveryModal.style.display = "none";
+          });
 
-      deliveryModal.addEventListener("click", (e) => {
-        if(e.target == deliveryModal){
-          deliveryModal.style.display = "none";
-        }
-      });
+          confirmDelivery.addEventListener("click", () => {
+            deliveryModal.style.display = "none";
+          });
 
+          storebotton.addEventListener("click", () => {
+            confirmDelivery.style.display = "none";
+            confirmDeliveryModaltwo.style.display = "block";
+          });
+
+          homebotton.addEventListener("click", () => {
+            confirmDelivery.style.display = "block";
+            confirmDeliveryModaltwo.style.display = "none";
+          });
+
+          hometwobotton.addEventListener("click", () => {
+            confirmDelivery.style.display = "block";
+            confirmDeliveryModaltwo.style.display = "none";
+          });
+
+          confirmDeliveryModaltwo.addEventListener("click", () => {
+            deliveryModal.style.display = "none";
+          });
+
+          deliveryModal.addEventListener("click", (e) => {
+            if(e.target == deliveryModal){
+              deliveryModal.style.display = "none";
+            }
+          });
+    }
       // 發票
-      const invoiceModal = document.querySelector("#invoiceModal");
-      const openInvoice = document.querySelector("#openInvoiceModal");
-      const closeInvoice = document.querySelector("#closeInvoiceModal");
-      const confirmInvoice = document.querySelector("#confirmInvoiceModal");
-      
+    function invoiceModal(){
+          const invoiceModal = document.querySelector("#invoiceModal");
+          const openInvoice = document.querySelector("#openInvoiceModal");
+          const closeInvoice = document.querySelector("#closeInvoiceModal");
+          const confirmInvoice = document.querySelector("#confirmInvoiceModal");
+          
 
-      openInvoice.addEventListener("click", () => {
-        invoiceModal.style.display = "block";
-      });
+          openInvoice.addEventListener("click", () => {
+            invoiceModal.style.display = "block";
+          });
 
-      closeInvoice.addEventListener("click", () => {
-        invoiceModal.style.display = "none";
-      });
-
-      confirmInvoice.addEventListener("click", () => {
-        invoiceModal.style.display = "none";
-      });
-
-      invoiceModal.addEventListener("click", (e) => {
-          if(e.target == invoiceModal){
+          closeInvoice.addEventListener("click", () => {
             invoiceModal.style.display = "none";
-          }
-      });
+          });
 
+          confirmInvoice.addEventListener("click", () => {
+            invoiceModal.style.display = "none";
+          });
 
-  // 這裡是關鍵
+          invoiceModal.addEventListener("click", (e) => {
+              if(e.target == invoiceModal){
+                invoiceModal.style.display = "none";
+              }
+          });
+    }
+
+  // 這裡是關鍵 所謂的儲存記憶到購物車
 
   // 從 localStorage 載入購物車
     function loadCart() {
@@ -104,6 +129,17 @@
 
       
     }
+    document.addEventListener('DOMContentLoaded', function(){
+      updateSellSummary();
+      invoiceModal();
+      deliveryModal();
+      console.log(cart);
 
-updateSellSummary();
-console.log(cart);
+      const sellcheckout = document.querySelector('.btn-checkout');
+      if(sellcheckout){
+        sellcheckout.addEventListener('click', function(){
+          alert('已送出訂單!');
+        });
+      }
+    });
+

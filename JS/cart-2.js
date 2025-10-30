@@ -176,7 +176,7 @@ function clearCart() {
     }
 }
 
-// 初始化
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('購物車頁面已載入');
     console.log('目前購物車:', cart);
