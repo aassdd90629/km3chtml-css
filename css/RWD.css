@@ -277,11 +277,21 @@
         width: 100%;
         display: grid;
         grid-template-columns: auto 1fr;
-        
+        padding-bottom: 0;
+    }
+
+    .product-detail-img {
+        display: grid;
+        grid-template-rows: 1fr 0.5fr;
+        gap: 0;
+    }
+    .product-detail-img-small{
+        align-items: center;
     }
     .product-detail-caption{
         display: grid;
-        grid-template-rows: 1fr 2.5fr 1fr;
+        grid-template-rows: 1fr 0.5fr 2.5fr 1fr;
+        gap: 8px;
     }
 
     .product-cta{
@@ -295,7 +305,14 @@
 
     .product-caption{
         width: 100%;
-
+    }
+    .product-price{
+        line-height: 2;
+        font-size: 28px;
+        font-weight: 700;
+        color: #ea1717;
+        align-items: center;
+        padding: 8px 16px;
     }
 
 
@@ -331,6 +348,8 @@
         order: 1;
 
     }
+
+
     .cart-summary{
         order: 0;
     }
@@ -478,7 +497,7 @@
     .product-detail-caption{
         display: grid;
         
-        grid-template-rows: 1fr 2.5fr 1fr;
+        grid-template-rows: 1fr 0.5fr 2.5fr 1fr;
     }
 
     .product-cta{

@@ -38,77 +38,44 @@
 
   <section>
     <div class="cart-container">
-      <div class="cart-items">
-        <div class="cart-item" data-id="k47m">
-          <div class="item-left">
-            <img src="img/prouct/keyboard.jpg" alt="i-Rocks K74M 鍵盤">
-          </div>
-          <div class="item-info">
-            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
-            <div class="summary-row total" data-price="2990">
-              <span>商品金額</span>
-              <span>NT$ 2990</span>
-            </div> 
-            <div class="item-actions">
-                <div class="quantity">
-                  <button class="qty-btn">−</button>
-                  <input type="text" value="1" readonly>
-                  <button class="qty-btn">+</button>
-                </div>
-              <button class="love-btn">追蹤</button>
-              <button class="remove-btn">刪除</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="cart-item" data-id="k47m">
-          <div class="item-left">
-            <img src="img/prouct/keyboard2.jpg" alt="i-Rocks K74M 鍵盤">
-          </div>
-          <div class="item-info">
-            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
-            <div class="summary-row total" data-price="2990">
-              <span>商品金額</span>
-              <span>NT$ 2990</span>
-            </div> 
-            <div class="item-actions">
-              <div class="quantity">
-                <button class="qty-btn">−</button>
-                <input type="text" value="1">
-                <button class="qty-btn">+</button>
-              </div>
-              <button class="love-btn">追蹤</button>
-              <button class="remove-btn">刪除</button>
-            </div>
-          </div>
+      <!-- 空購物車 -->
+      <div class="empty-cart" id="emptyCart" style="display: none;">
+        <div class="empty-cart-in">
+          <p>購物車目前是空的</p>
+          <a href="product-list.html" class="continue-shopping">繼續購物</a>
         </div>
       </div>
-      <!-- JS複製的模板 當導入js後上面內容須刪除 -->
+
+      <!-- 購物車商品列表 -->
+      <div class="cart-items" id="cartItemsContainer" style="display: none;">
+      </div>
+
+      <!-- JS 用的模板 -->
       <template id="cart-item-template">
-        <div class="cart-item" data-id="k47m">
+        <div class="cart-item" data-sku="">
           <div class="item-left">
-            <img src="img/prouct/keyboard2.jpg" alt="i-Rocks K74M 鍵盤">
+            <img src="" alt="">
           </div>
           <div class="item-info">
-            <h4>i-Rocks 艾芮克 irocks K74M 機械式鍵盤</h4>
-            <div class="summary-row total" data-price="2990">
+            <h4 class="item-name"></h4>
+            <div class="item-price">
               <span>商品金額</span>
-              <span>NT$ 2990</span>
+              <span class="price-value"></span>
             </div> 
             <div class="item-actions">
               <div class="quantity">
-                <button class="qty-btn">−</button>
-                <input type="text" value="1">
-                <button class="qty-btn">+</button>
+                <button class="qty-btn qty-decrease">−</button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-increase">+</button>
               </div>
-              <button class="remove-btn" id="remove-btn">刪除</button>
+              <button class="remove-btn">刪除</button>
             </div>
           </div>
         </div>
       </template>
 
-
-      <div class="cart-summary">
+      <!-- 購物車總計 -->
+      <div class="cart-summary" id="cartSummary">
         <h3>小計明細</h3>
         <hr>
         <div class="summary-row">
@@ -116,14 +83,13 @@
         </div>
         <div class="summary-row">
           <span>商品金額</span>
-          <span>NT$ 5980</span>
+          <span id="subtotalAmount">NT$ 0</span>
         </div>
         <hr>
         <div class="summary-row total">
           <span>小計</span>
-          <span>NT$ 5980</span>
+          <span id="totalAmount">NT$ 0</span>
         </div>
-
         <button class="coupon-btn">輸入優惠碼</button>
       </div>
     </div>
@@ -136,7 +102,7 @@
       <div class="checkout-inner">
         <div class="subtotal">
           <span class="subtotal-label">小計</span>
-          <span class="subtotal-price">NT$ 5980</span>
+          <span class="subtotal-price" id="checkoutsubtotal">NT$ 0</span>
         </div>
         <a class="btn-checkout" href="sell.html"><span>前往結帳</span></a>
       </div>
@@ -150,6 +116,7 @@
   </footer>
 		
 <script src="JS/headerfooter.js"></script>
+<script src="JS/cart-2.js"></script>
 
 
 </body>

@@ -49,3 +49,61 @@
           }
       });
 
+
+  // 這裡是關鍵
+
+  // 從 localStorage 載入購物車
+    function loadCart() {
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            return JSON.parse(savedCart);
+        }
+        return [];
+    }
+
+    // 儲存購物車到 localStorage
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // 購物車陣列
+    let cart = loadCart();
+
+    // 更新購物車(統一呼叫點)
+    function updateCart() {
+        saveCart(); 
+        updateCartCount(); 
+        
+
+        if (typeof renderCartPage === 'function') {
+            renderCartPage();
+        }
+    }
+
+
+    function updateSellSummary() {
+      const subtotalsellAmount = document.getElementById('subtotalsellAmount');
+      const totalsellAmount = document.getElementById('totalsellAmount');
+      const checkoutsellsubtotal = document.getElementById('checkoutsellsubtotal');
+
+      const total = cart.reduce(function(sum, item){
+        return sum + (item.price * item.quantity);
+      }, 0);
+
+      if(subtotalsellAmount){
+        subtotalsellAmount.innerText = 'NT$ ' + total.toLocaleString();
+      }
+
+      if (totalsellAmount){
+        totalsellAmount.innerText = 'NT$ ' + total.toLocaleString();
+      }
+
+      if (checkoutsellsubtotal){
+        checkoutsellsubtotal.innerText = 'NT$ ' + total.toLocaleString();
+      }
+
+      
+    }
+
+updateSellSummary();
+console.log(cart);
