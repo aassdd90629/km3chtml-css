@@ -5,7 +5,6 @@
         $('.fixlistone').click(function(){
                 $(this).nextAll().slideToggle(500)
             }).nextAll().hide()
-
       });
       
       $(function(){

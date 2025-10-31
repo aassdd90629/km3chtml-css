@@ -37,10 +37,10 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// 購物車陣列
+
 let cart = loadCart();
 
-// 更新購物車(統一呼叫點)
+// 更新購物車的統一呼叫點
 function updateCart() {
     saveCart(); 
     updateCartCount(); 
@@ -54,12 +54,13 @@ function updateCart() {
 // 更新購物車數量顯示
 function updateCartCount() {
     const cartCountElement = document.getElementById('cartCount');
+    console.log(cartCountElement);
     if (cartCountElement) {
 
         const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCountElement.textContent = totalQuantity;
         
-
+        console.log(totalQuantity);
         if (totalQuantity > 0) {
             cartCountElement.classList.add('has-items');
         } else {
@@ -170,14 +171,7 @@ function updateQuantity(sku, newQuantity) {
     }
 }
 
-// 清空購物車
-function clearCart() {
-    if (confirm('確定要清空購物車嗎?')) {
-        cart = [];
-        updateCart();
-        showNotification('購物車已清空');
-    }
-}
+
 
 
 function getCartTotal() {

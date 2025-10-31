@@ -21,13 +21,23 @@ function renderCartPage() {
     const cartItemsContainer = document.getElementById('cartItemsContainer');
     const emptyCart = document.getElementById('emptyCart');
     const cartSummary = document.getElementById('cartSummary');
+    const cartItemsWrapper = document.getElementById('cartItemsWrapper');
     
 
     if (cart.length === 0) {
-
         if (emptyCart) emptyCart.style.display = 'block';
         if (cartItemsContainer) cartItemsContainer.style.display = 'none';
         if (cartSummary) cartSummary.style.display = 'flex';
+        if (cartItemsWrapper) cartItemsWrapper.style.display = 'none';
+        const btncheckout = document.querySelector('.btn-checkout');
+        if (btncheckout) {
+            btncheckout.addEventListener('click', function( e ){
+                e.preventDefault();
+                alert('未新增任何商品');
+            });
+        }
+        updateCartSummary();
+        console.log(cart.length);
         return;
     }
     
@@ -35,9 +45,11 @@ function renderCartPage() {
     if (emptyCart) emptyCart.style.display = 'none';
     if (cartItemsContainer) cartItemsContainer.style.display = 'block';
     if (cartSummary) cartSummary.style.display = 'flex';
+    if (cartItemsWrapper) cartItemsWrapper.style.display = 'block';
+
+
     
-    cartItemsContainer.innerHTML = '';
-    
+    cartItemsWrapper.innerHTML = '';
  
     const template = document.getElementById('cart-item-template');
     
@@ -94,7 +106,7 @@ function renderCartPage() {
             }
         });
         
-        cartItemsContainer.appendChild(clone);
+        cartItemsWrapper.appendChild(clone);
     });
     
 
@@ -121,6 +133,7 @@ function updateCartSummary() {
     if (checkoutElement) {
         checkoutElement.innerText = 'NT$ ' + total.toLocaleString();
     }
+
 }
 
 // 更新商品數量
@@ -151,42 +164,22 @@ function removeFromCart(sku) {
         cart.splice(index, 1);
         saveCart(cart);
         renderCartPage();
-        updateCartCount();
     }
+
 }
 
-// 更新購物車數量
-function updateCartCount() {
-    const cartCountElement = document.getElementById('cartCount');
-    if (cartCountElement) {
-        const totalQuantity = cart.reduce(function(sum, item) {
-            return sum + item.quantity;
-        }, 0);
-        cartCountElement.textContent = totalQuantity;
-    }
-}
 
-// 清空購物車
-function clearCart() {
-    if (confirm('確定要清空購物車嗎?')) {
-        cart = [];
-        saveCart(cart);
-        renderCartPage();
-        updateCartCount();
-    }
-}
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('購物車頁面已載入');
     console.log('目前購物車:', cart);
     
-
     renderCartPage();
-    
+    updateCartSummary();
 
-    updateCartCount();
-    
     const couponBtn = document.querySelector('.coupon-btn');
     if (couponBtn) {
         couponBtn.addEventListener('click', function() {

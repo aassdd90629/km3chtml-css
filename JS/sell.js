@@ -5,9 +5,9 @@
           const closeDelivery = document.querySelector("#closeDeliveryModal");
           const confirmDelivery = document.querySelector("#confirmDeliveryModal");
           const confirmDeliveryModaltwo = document.querySelector('#confirmDeliveryModaltwo');
-          const storebotton = document.querySelector("#store");
-          const homebotton = document.querySelector("#home");
-          const hometwobotton = document.querySelector("#hometwo");
+          const storeButton = document.querySelector("#store");
+          const homeButton = document.querySelector("#home");
+          const hometwoButton = document.querySelector("#hometwo");
 
 
 
@@ -23,21 +23,18 @@
             deliveryModal.style.display = "none";
           });
 
-          storebotton.addEventListener("click", () => {
-            confirmDelivery.style.display = "none";
-            confirmDeliveryModaltwo.style.display = "block";
+          document.addEventListener("click", (e) => {
+            if (e.target === storeButton) {
+              confirmDeliveryModal.style.display = "none";
+              confirmDeliveryModaltwo.style.display = "block";
+            } else if (e.target === homeButton) {
+              confirmDeliveryModal.style.display = "block";
+              confirmDeliveryModaltwo.style.display = "none";
+            } else if (e.target === hometwoButton) {
+              confirmDeliveryModal.style.display = "block";
+              confirmDeliveryModaltwo.style.display = "none";
+            }
           });
-
-          homebotton.addEventListener("click", () => {
-            confirmDelivery.style.display = "block";
-            confirmDeliveryModaltwo.style.display = "none";
-          });
-
-          hometwobotton.addEventListener("click", () => {
-            confirmDelivery.style.display = "block";
-            confirmDeliveryModaltwo.style.display = "none";
-          });
-
           confirmDeliveryModaltwo.addEventListener("click", () => {
             deliveryModal.style.display = "none";
           });
@@ -94,16 +91,6 @@
     // 購物車陣列
     let cart = loadCart();
 
-    // 更新購物車(統一呼叫點)
-    function updateCart() {
-        saveCart(); 
-        updateCartCount(); 
-        
-
-        if (typeof renderCartPage === 'function') {
-            renderCartPage();
-        }
-    }
 
 
     function updateSellSummary() {
@@ -129,6 +116,8 @@
 
       
     }
+
+
     document.addEventListener('DOMContentLoaded', function(){
       updateSellSummary();
       invoiceModal();
