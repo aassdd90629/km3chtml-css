@@ -193,11 +193,22 @@
         height: auto;
     }
 
+    .JQcarousel{
+        width: calc(100% - 32px);
+        height: auto;
+        margin: 0 auto;
+    }
+
     .carousel-inner > .carousel-item > img{
         max-width: 100%;
         height: auto;
 
     }
+    .JQcarouselimg{
+        max-width: 100%;
+        height: auto;
+    }
+    
     .filter{
         max-width: calc(100% - 96px);
         height: auto;

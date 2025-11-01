@@ -54,13 +54,11 @@ function updateCart() {
 // 更新購物車數量顯示
 function updateCartCount() {
     const cartCountElement = document.getElementById('cartCount');
-    console.log(cartCountElement);
     if (cartCountElement) {
 
         const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCountElement.textContent = totalQuantity;
         
-        console.log(totalQuantity);
         if (totalQuantity > 0) {
             cartCountElement.classList.add('has-items');
         } else {
@@ -122,7 +120,7 @@ function addToCart(sku) {
     
     showNotification(product.name + ' 已加入購物車！');
     
-    console.log('目前購物車:', cart);
+    // console.log('目前購物車:', cart);
 }
 
 // 顯示加入購物車通知
@@ -148,15 +146,17 @@ function showNotification(message) {
 }
 
 // 移除購物車商品
-function removeFromCart(sku) {
-    const index = cart.findIndex(item => item.sku === sku);
-    if (index > -1) {
-        const removedItem = cart[index];
-        cart.splice(index, 1);
-        updateCart();
-        showNotification(removedItem.name + ' 已從購物車移除');
-    }
-}
+// function removeFromCart(sku) {
+//     const index = cart.findIndex(item => item.sku === sku);
+//     console.log(index);
+//     if (index > -1) {
+//         const removedItem = cart[index];
+//         cart.splice(index, 1);
+//         updateCart();
+//         showNotification(removedItem.name + ' 已從購物車移除');
+//     }
+    
+// }
 
 // 更新商品數量
 function updateQuantity(sku, newQuantity) {
@@ -180,10 +180,10 @@ function getCartTotal() {
 
 // 頁面載入時初始化
 document.addEventListener('DOMContentLoaded', function() {
-
     initialCart();
-    
+    updateQuantity();
     updateCartCount();
+
     
     console.log('購物車系統已初始化');
     console.log('目前購物車:', cart);

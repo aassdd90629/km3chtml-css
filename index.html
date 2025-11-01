@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/product.css">
   <link rel="stylesheet" href="css/RWD.css">
   <link rel="icon" href="img/header/logo_3.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 
   
   
@@ -23,29 +24,20 @@
    <header>
    </header>
 <!-- banner -->
-<div id="carouselExampleIndicators" class="carousel" data-interval="3500">
-  <div class="carousel-indicators">
-    <button data-slide-to="0" class="active"></button>
-    <button data-slide-to="1"></button>
-    <button data-slide-to="2"></button>
+<section>
+  <div id="sliderBoard" class="JQcarousel">
+      
+      <ul id="content">
+        <li><img src="img/banner/banner_keyboard.jpg" class="JQcarouselimg" alt="Keyboard banner"></li>
+        <li><img src="img/banner/banner_keyboard1.png" class="JQcarouselimg" alt="Keyboard banner 2"></li>
+        <li><img src="img/banner/banner_mouse.jpg" class="JQcarouselimg" alt="Mouse banner"></li>
+      </ul>
+
+    <ul id="contentButton"></ul>
+    <button class="carousel-control-prev" aria-label="上一張">&larr;</button>
+    <button class="carousel-control-next" aria-label="下一張">&rarr;</button>
   </div>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/banner/banner_keyboard.jpg"  alt="Keyboard banner">
-    </div>
-    <div class="carousel-item">
-      <img src="img/banner/banner_keyboard1.png" alt="Keyboard banner 2">
-    </div>
-    <div class="carousel-item">
-      <img src="img/banner/banner_mouse.jpg" alt="Mouse banner">
-    </div>
-  </div>
-
-  <button class="carousel-control-prev" aria-label="上一張">&larr;</button>
-  <button class="carousel-control-next" aria-label="下一張">&rarr;</button>
-</div>
-
+</section>
   
 <!-- 主內容 -->
 
@@ -252,7 +244,7 @@
 </footer>
 <script src="JS/headerfooter.js"></script>
 <script src="JS/filter.js"></script>
-
+<script src="JS/autoplay.js"></script>
 
 
 </body>

@@ -620,3 +620,46 @@ section{
   .register-from .registerbtn{ letter-spacing:.12em; }
 }
 
+
+/* JQ輪播 */
+
+#sliderBoard{   /* div */
+    overflow: hidden;
+    border: 0;
+    border-radius:10px;
+    position: relative;
+
+}
+
+.JQcarouselimg{
+  width: 100%;
+}
+#content{       /* ul */
+    position: relative;
+}
+#content li{    /* li */
+    float: left;
+}
+/* circle button */
+#contentButton{
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+}
+#contentButton li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 10px;
+    display: inline-block;
+
+  }
+
+#contentButton li.clicked{
+    background-color: #666;
+}

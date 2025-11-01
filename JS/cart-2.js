@@ -149,7 +149,6 @@ function updateQuantity(sku, newQuantity) {
             item.quantity = newQuantity;
             saveCart(cart);
             renderCartPage();
-            updateCartCount();
         }
     }
 }
@@ -167,10 +166,6 @@ function removeFromCart(sku) {
     }
 
 }
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
