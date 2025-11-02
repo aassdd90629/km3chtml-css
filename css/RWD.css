@@ -200,12 +200,12 @@
     }
 
     .carousel-inner > .carousel-item > img{
-        max-width: 100%;
+        width: 100%;
         height: auto;
 
     }
     .JQcarouselimg{
-        max-width: 100%;
+        width: 100%;
         height: auto;
     }
     
@@ -264,10 +264,6 @@
         margin: 0 auto;
         margin-top: 32px;
         padding: 0;
-    }
-
-    .product-card:first-child{
-        display: none;
     }
 
     .product-card{

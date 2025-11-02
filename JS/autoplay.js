@@ -1,20 +1,21 @@
 $(function () {
-    let divWidth = $('#sliderBoard').width()
-    let imgCount = $('#content li').length
+    let divWidth = $('#sliderBoard').width();
+    let imgCount = $('#content li').length;
 
-    let firstLi = $('#content li:first').clone()
-    let lastLi = $('#content li:last').clone()
+    let firstLi = $('#content li:first').clone();
+    let lastLi = $('#content li:last').clone();
 
     $('#content').append(firstLi)
     $('#content').prepend(lastLi)
     
     for(let i = 0; i < imgCount; i++){
-        $('#contentButton').append(`<li></li>`)
+        $('#contentButton').append(`<li></li>`);
     }
-    $('#contentButton li:first').addClass('clicked')
+    $('#contentButton li:first').addClass('clicked');
     
-    $('#content li').width(divWidth)    
-    $('#content').width(divWidth * (imgCount + 2))    
+    $('#content li').width(divWidth); 
+    $('#content').width(divWidth * (imgCount + 2));
+    $('#content').css('left', divWidth * (-1));    
     
     let index = 1 // 要從1開始 因為前面有複製一張
     let timer = setInterval(moveToNext, 5000)
@@ -52,6 +53,7 @@ $(function () {
 
     function moveToNext(){
         index++
+
         // 為了讓輪播看起來滑順 所以做成動畫
         $('#content').animate({
             left: divWidth * index * -1,
@@ -106,5 +108,11 @@ $(function () {
         timer = setInterval(moveToNext, 5000);
     });
 
+    $('#content').on('mouseover', function () { 
+        clearInterval(timer);
+    });
+    $('#content').on('mouseleave', function () { 
+        timer = setInterval(moveToNext, 5000); 
+    });
 
 });
