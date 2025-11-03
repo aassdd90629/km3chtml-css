@@ -74,8 +74,9 @@
             if (match) {
               card.classList.remove('hide');
               // 強制重排以重啟動畫
-              void card.offsetWidth;
-              // const _ = card.offsetWidth; 上面那行類似這個寫法 用來表示不需要的變數 與CSS動畫有關
+              // 
+              const _ = card.offsetWidth;
+              // void card.offsetWidth; 上面那行類似這個寫法 用來表示不需要的變數 與CSS動畫有關
               card.classList.add('show');
             } else {
               card.classList.remove('show');
