@@ -47,38 +47,41 @@
         start();
       });
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.items .item');
-        const cards   = document.querySelectorAll('.gallery .image');
-
-
-        buttons.forEach(btn => {
-          btn.addEventListener('click', () => {
-
-            document.querySelector('.items .item.active')?.classList.remove('active');
-            btn.classList.add('active');
-
-
-            const target = btn.dataset.name.toLowerCase();
-
-            cards.forEach(card => {
-              const type = card.dataset.name?.toLowerCase() || '';
-              const match = target === 'all' || type === target;
-
- 
-              if (match) {
-                card.classList.remove('hide');
-
-
-                card.classList.remove('show');
-
-                void card.offsetWidth;
-                card.classList.add('show');
-              } else {
-                card.classList.add('hide');
-                card.classList.remove('show');
-              }
-            });
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.items .item');
+      const cards   = document.querySelectorAll('.gallery .image');
+      
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // 避免重複點擊同一個按鈕
+          if (btn.classList.contains('active')) return;
+          
+          // const activeItem = document.querySelector('.items .item.active');
+          // if (activeItem) {
+          //   activeItem.classList.remove('active');
+          // } 
+          // 可選鏈運算符 (Optional Chaining) 如果前面的值存在(不是 null 或 undefined),就繼續執行後面的操作
+          document.querySelector('.items .item.active')?.classList.remove('active');  
+          // 如果前面的值是 null 或 undefined,就停止執行,整個表達式返回 undefined
+          btn.classList.add('active');
+          
+          const target = btn.dataset.name.toLowerCase();
+          
+          cards.forEach(card => {
+            const type = card.dataset.name?.toLowerCase() || '';
+            const match = target === 'all' || type === target;
+            
+            if (match) {
+              card.classList.remove('hide');
+              // 強制重排以重啟動畫
+              void card.offsetWidth;
+              // const _ = card.offsetWidth; 上面那行類似這個寫法 用來表示不需要的變數 與CSS動畫有關
+              card.classList.add('show');
+            } else {
+              card.classList.remove('show');
+              card.classList.add('hide');
+            }
           });
         });
       });
+    });

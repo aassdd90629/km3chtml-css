@@ -568,4 +568,9 @@
     .register-row{
         width: calc(100% - 24px);
     }
+
+    .remove-btn{
+        left: 0;
+        right: auto;
+    }
 }
