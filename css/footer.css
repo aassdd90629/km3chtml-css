@@ -98,6 +98,7 @@ footer{
   font-size: 20px;
   font-weight: 800;
   margin: 2px 0 12px;
+  flex-wrap: nowrap;
 }
 
 .info-about ul{
@@ -108,10 +109,14 @@ footer{
   row-gap: 12px;
 }
 
+.info-text-group > .info-text > .info-about > .p-title > ul > li{
+  white-space: nowrap;
+}
 .info-about a{
   color: #0a0a0a;
   text-decoration: none;
   font-weight: 700;
+  white-space: nowrap;  
 }
 
 .info-about a:hover{

@@ -380,7 +380,7 @@
   gap: 12px;
 }
 
-.product-detail-img-small img{
+.product-detail-img-small > img{
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -390,6 +390,7 @@
   background: #fff;
   opacity: 0.5;
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  cursor: pointer;
 }
 
 
@@ -459,11 +460,11 @@
   margin-top: auto;
 }
 
-.product-cta button{
+.product-cta > button{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 4px;
   height: 64px;
   padding: 0 28px;
   border-radius: 999px;
@@ -474,28 +475,40 @@
   transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
   /* 注意 */
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .btn-outline-love{
   background: #fff;
+  height: 24px;
+  width: 24px;
+  border: 0;
+}
+.btn-outline-love > i{
   color: #111;
-  border: 2px solid #d9d9d9;
 }
 
-.btn-outline-love:hover{
-  border-color: #60C7FA;
+.btn-outline-love > i:hover{
+  color: #ea1717;
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
   transform: translateY(-1px);
 }
 
-.btn-primary-cart{
+.btn-primary-buy{
   background: #60C7FA;
   color: #fff;
   border: 2px solid transparent;
   box-shadow: 0 10px 26px rgba(8, 190, 182, .25);
 }
+.btn-primary-cart{
+  background: #fff;
+  color: #000;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 26px rgba(8, 190, 182, .25);
+}
 
-.btn-primary-cart:hover{
+.btn-primary-cart:hover,
+.btn-primary-buy:hover{
   background: #5debe6;
   transform: translateY(-1px);
   box-shadow: 0 14px 30px rgba(8, 190, 182, .35);
